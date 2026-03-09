@@ -1,6 +1,6 @@
 /* ── RENDER ───────────────────────────────────────────────── */
 
-import { projects, photos, academics } from './data.js';
+import { projects, photos, academics, skills } from './data.js';
 
 export function renderProjects() {
   const grid = document.getElementById('projects-grid');
@@ -59,5 +59,32 @@ export function renderAcademics() {
         <span class="academic-badge">${a.badge}</span>
       </div>`;
     list.appendChild(item);
+  });
+}
+
+export function renderSkills() {
+  const wrapper = document.getElementById('skills-grid');
+
+  skills.forEach(cat => {
+    const section = document.createElement('div');
+    section.className = 'skills-category';
+
+    const title = document.createElement('div');
+    title.className = 'skills-category-title';
+    title.textContent = cat.category;
+
+    const pills = document.createElement('div');
+    pills.className = 'skills-pills';
+
+    cat.items.forEach(name => {
+      const pill = document.createElement('span');
+      pill.className = 'skill-pill';
+      pill.innerHTML = `<span class="skill-dot" style="background:${cat.color}"></span>${name}`;
+      pills.appendChild(pill);
+    });
+
+    section.appendChild(title);
+    section.appendChild(pills);
+    wrapper.appendChild(section);
   });
 }
