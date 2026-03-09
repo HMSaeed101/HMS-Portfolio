@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     title: "Photography Portfolio",
-    tag: "Design",
+    tag: "Observence",
     desc: "A masonry-grid photography showcase with lightbox viewing, lazy loading, and EXIF metadata display.",
     img: "https://picsum.photos/seed/proj2/600/400",
     demo: "#", code: "#"
@@ -23,45 +23,52 @@ export const projects = [
     demo: "#", code: "#"
   },
   {
-    title: "Weather Dashboard",
-    tag: "Data Viz",
-    desc: "A beautiful weather app with animated forecasts, historical charts, and location auto-detection.",
+    title: "Electronic Library",
+    tag: "Web Dev",
+    desc: "A digital library management system with advanced search capabilities, user ratings, and recommendation algorithms.",
     img: "https://picsum.photos/seed/proj4/600/400",
     demo: "#", code: "#"
   }
 ];
 
 export const photos = [
-  { src: "https://picsum.photos/seed/ph1/600/800", caption: "Golden Hour, Karachi" },
-  { src: "https://picsum.photos/seed/ph2/600/500", caption: "Street Stories" },
-  { src: "https://picsum.photos/seed/ph3/600/700", caption: "Monsoon Light" },
-  { src: "https://picsum.photos/seed/ph4/600/900", caption: "City at Dusk" },
-  { src: "https://picsum.photos/seed/ph5/600/500", caption: "Market Colours" },
-  { src: "https://picsum.photos/seed/ph6/600/650", caption: "Quiet Moments" },
-  { src: "https://picsum.photos/seed/ph7/600/750", caption: "Architecture" },
-  { src: "https://picsum.photos/seed/ph8/600/500", caption: "People & Places" },
-  { src: "https://picsum.photos/seed/ph9/600/800", caption: "Morning Mist" }
+  { src: "../Pics/Clicks/Insect Fruitfly.jpg", caption: "Close-up Shot of a fruit fly" },
+  { src: "../Pics/Clicks/Bird Kyole.jpg", caption: "Kyole on a Tree" },
+  { src: "../Pics/Clicks/Pink.jpg", caption: "Pink Bud" },
+  { src: "../Pics/Clicks/Purple Flower.jpg", caption: "Purple Flower" },
+  { src: "../Pics/Clicks/Spider.jpg", caption: "Market Colours" },
+  { src: "../Pics/Clicks/Yellow Flower.jpg", caption: "Quiet Moments" },
+  { src: "../Pics/Clicks/Rose_bud.jpg", caption: "Architecture" },
+  { src: "../Pics/Clicks/Dandellion.jpg", caption: "People & Places" },
+  { src: "../Pics/Clicks/Bird Kyole.jpg", caption: "Morning Mist" }
 ];
 
 export const academics = [
   {
-    year: "2024",
+    year: "2025",
     degree: "Bachelor of Science in Computer Science",
-    school: "University of Karachi",
+    school: "University of Engeenering and Technology, Taxila",
     desc: "Focused on software engineering, algorithms, and human-computer interaction. Final year project: AI-powered content generation platform.",
-    badge: "CGPA 3.85 / 4.0"
+    badge: "CGPA 3.95 / 4.0"
+  },
+  {
+    year: "2022",
+    degree: "Intermediate (Pre-Medical)",
+    school: "Jinnah Education System, Taxila",
+    desc: "Completed with distinction. Awarded merit scholarship for consecutive academic years.",
+    badge: "90% Marks"
   },
   {
     year: "2020",
-    degree: "Intermediate (Pre-Engineering)",
-    school: "Government College, Karachi",
-    desc: "Completed with distinction. Awarded merit scholarship for consecutive academic years.",
-    badge: "94% Marks"
+    degree: "Matriculation (Science)",
+    school: "Jinnah Education System, Taxila",
+    desc: "Foundation in mathematics, physics and chemistry. Class representative and debate team captain.",
+    badge: "A+ Grade"
   },
   {
-    year: "2018",
+    year: "2020",
     degree: "Matriculation (Science)",
-    school: "The City School, Karachi",
+    school: "Jinnah Education System, Taxila",
     desc: "Foundation in mathematics, physics and chemistry. Class representative and debate team captain.",
     badge: "A+ Grade"
   }

@@ -6,7 +6,7 @@ nav {
   width: 100%;
   z-index: 100;
   background: rgba(247,244,239,0.85);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--ink-10);
   height: 72px;
 }
