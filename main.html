@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HMS | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css">
+
+  <script type="module" src="javascript/main.js"></script>
+</head>
+
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────────── -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">HMS.</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#photography">Photography</a>
+      <a href="#academic">Academic</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mobile-link">
+    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    About
+  </a>
+  <a href="#projects" class="mobile-link">
+    <svg class="icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+    Projects
+  </a>
+  <a href="#photography" class="mobile-link">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+    Photography
+  </a>
+  <a href="#academic" class="mobile-link">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    Academic
+  </a>
+  <a href="#contact" class="mobile-link">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    Contact
+  </a>
+</div>
+
+<!-- ── HERO ────────────────────────────────────────────────── -->
+<section id="hero" class="section">
+
+  <div class="container">
+    
+    <div class="hero-inner">
+
+      <div class="hero-text reveal">
+        <p class="label">Welcome to my world</p>
+        <h1 class="hero-h1">I'm <span>Saeed</span>.</h1>
+        <p class="hero-sub">Storyteller, Programmer, Photographer &amp; Lifelong Learner</p>
+        
+        <div class="hero-btn reveal">
+          <a href="#about" class="btn-olive">My Story</a>
+          <a href="#projects" class="btn-outline">View Projects</a>
+        </div>
+
+      </div>
+
+    <!-- HERO Image --> 
+      <div class="hero-img-wrap reveal reveal-delay-2">
+        <img src="Pics/Saeed.jpg" alt="Hafiz Muhammad Saeed">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ───────────────────────────────────────────────── -->
+<section id="about" class="section bg-white">
+  <div class="container">
+
+    <div class="reveal">
+      <p class="label">Who I am</p>
+      <h2 class="section-title">My Story</h2>
+      <p class="section-sub">A narrative of life, philosophy, and the pursuit of balance.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal reveal-delay-1">
+        <p>I believe that life is a collection of stories waiting to be told. My journey is a blend of logical precision and creative expression. From the structured world of programming to the spontaneous beauty captured through my lens, I seek balance in all things.</p>
+        <div class="philosophy-box">
+          <strong>My Philosophy</strong>
+          "To live is to learn, and to learn is to grow. I find beauty in the intersection of technology and humanity."
+        </div>
+      </div>
+      <div class="about-imgs reveal reveal-delay-2">
+        <img src="https://picsum.photos/seed/about1/400/500" alt="About 1">
+        <img src="https://picsum.photos/seed/about2/400/500" alt="About 2">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PROJECTS ────────────────────────────────────────────── -->
+<section id="projects" class="section">
+  <div class="container">
+
+    <div class="reveal">
+      <p class="label">What I build</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">A collection of digital artifacts and experiments.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="projects-grid" id="projects-grid"></div>
+
+  </div>
+</section>
+
+<!-- ── PHOTOGRAPHY ─────────────────────────────────────────── -->
+<section id="photography" class="section bg-white">
+  <div class="container">
+
+    <div class="reveal">
+      <p class="label">Through my lens</p>
+      <h2 class="section-title">Photography</h2>
+      <p class="section-sub">Capturing the fleeting moments of life.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="photo-grid reveal reveal-delay-1" id="photo-grid"></div>
+
+  </div>
+</section>
+
+<!-- ── ACADEMIC ────────────────────────────────────────────── -->
+<section id="academic" class="section">
+  <div class="container">
+
+    <div class="reveal">
+      <p class="label">Education</p>
+      <h2 class="section-title">Academic Achievements</h2>
+      <p class="section-sub">Milestones of my educational journey.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="academic-list reveal reveal-delay-1" id="academic-list"></div>
+
+  </div>
+</section>
+
+<!-- ── CONTACT ─────────────────────────────────────────────── -->
+<section id="contact" class="section bg-white">
+  <div class="container">
+
+    <div class="reveal">
+      <p class="label">Get in touch</p>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-sub">I'd love to hear from you.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info reveal reveal-delay-1">
+        <a href="mailto:saeed@example.com" class="contact-row">
+          <div class="contact-icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-meta">
+            <p>Email</p>
+            <p>saeed@example.com</p>
+          </div>
+        </a>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.12 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l1.02-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-meta">
+            <p>Phone</p>
+            <p>+92 300 0000000</p>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-meta">
+            <p>Location</p>
+            <p>Karachi, Pakistan</p>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="#" class="social-btn" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-delay-2">
+        <form id="contactForm">
+          <div class="form-row">
+            <input type="text" class="form-field" placeholder="Name" required>
+            <input type="email" class="form-field" placeholder="Email" required>
+          </div>
+          <textarea class="form-field" placeholder="Message" rows="5" required></textarea>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Hafiz Muhammad Saeed</div>
+        <div class="footer-tagline">Storyteller · Programmer · Photographer</div>
+      </div>
+      <p class="footer-copy">© 2026 Hafiz Muhammad Saeed. Built with care.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ── LIGHTBOX ────────────────────────────────────────────── -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* ── FOOTER ───────────────────────────────────────────────── */
+
+footer {
+  background: var(--white);
+  border-top: 1px solid var(--ink-10);
+  padding: 3rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--olive);
+}
+.footer-tagline { font-size: .85rem; color: var(--ink-60); margin-top: .2rem; }
+.footer-copy    { font-size: .78rem; color: var(--ink-40); }
+
+/* ── LIGHTBOX ─────────────────────────────────────────────── */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.open { display: flex; }
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 24px;
+  box-shadow: 0 32px 80px rgba(0,0,0,.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,.3); }

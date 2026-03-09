@@ -1,0 +1,13 @@
+
+/* Order matters:
+   1. rules      — variables & reset must come first so everything else can use them
+   2. nav-bar    — navigation and mobile menu
+   3. sections   — layout, buttons, and all page sections
+   4. footer     — footer and lightbox
+   5. responsive — media queries always last, they override everything above */
+
+@import './rules.css';
+@import './nav-bar.css';
+@import './sections.css';
+@import './footer.css';
+@import './responsiveness.css';

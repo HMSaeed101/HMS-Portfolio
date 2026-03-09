@@ -1,0 +1,89 @@
+/* ── CSS Variables ────────────────────────────────────────── */
+
+:root {
+  --olive:    #6b7c4a;
+  --olive-lt: #8a9e60;
+  --warm-bg:  #f7f4ef;
+  --white:    #ffffff;
+  --ink:      #2a2a22;
+  --ink-60:   rgba(42,42,34,0.6);
+  --ink-40:   rgba(42,42,34,0.4);
+  --ink-10:   rgba(42,42,34,0.08);
+  --earth:    #b5956a;
+  --radius:   32px;
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--warm-bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+::selection {
+  background: rgba(107,124,74,0.2);
+  color: var(--olive);
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+
+.serif { font-family: 'Cormorant Garamond', serif; }
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--olive);
+  font-weight: 500;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--olive);
+  line-height: 1.1;
+}
+
+.section-sub {
+  font-size: 1.05rem;
+  color: var(--ink-60);
+  font-style: italic;
+  margin-top: .5rem;
+}
+
+.divider {
+  width: 56px;
+  height: 3px;
+  background: rgba(107,124,74,0.25);
+  border-radius: 99px;
+  margin-top: 1.5rem;
+}
+
+/* ── SVG Icons ────────────────────────────────────────────── */
+
+.icon {
+  width: 20px; height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.icon-sm  { width: 15px; height: 15px; }
+.icon-nav { width: 16px; height: 16px; }
