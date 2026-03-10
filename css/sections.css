@@ -1,11 +1,9 @@
 /* ── Layout ───────────────────────────────────────────────── */
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 5vw, 4rem);
 }
-
 .section  { padding: clamp(4rem, 10vw, 8rem) 0; }
 .bg-white { background: var(--white); }
 

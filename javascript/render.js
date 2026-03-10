@@ -2,8 +2,12 @@
 
 import { renderList } from './utils.js';
 
-function cloneTemplate(id) {
-  return document.getElementById(id).content.cloneNode(true).firstElementChild;
+export function cloneTemplate(id) {
+  const template = document.getElementById(id);
+  if (!template) {
+    throw new Error(`cloneTemplate: no <template> found with id "${id}"`);
+  }
+  return template.content.cloneNode(true).firstElementChild;
 }
 
 export function renderProjects(projects) {
