@@ -1,8 +1,6 @@
 /* ── UTILS ────────────────────────────────────────────────── */
 
-
 /* ── LIGHTBOX ─────────────────────────────────────────────── */
-
 export function initLightbox() {
   const lightbox    = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
@@ -22,7 +20,11 @@ export function initLightbox() {
   document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 
-  // Return openLightbox so render.js can use it via main.js
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
   return openLightbox;
 }
 
@@ -37,6 +39,13 @@ export function initMobileMenu() {
 
   document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      mobileMenu.classList.remove('open');
+    }
   });
 }
 
@@ -71,4 +80,26 @@ export function initContactForm() {
       this.reset();
     }, 3000);
   });
+}
+
+/* ── PHOTO GRID ─────────────────────────────────────────── */
+export function initPhotoGrid(openLightbox) {
+  document.getElementById('photo-grid').addEventListener('click', (e) => {
+    const item = e.target.closest('.photo-item');
+    if (!item) return;
+    openLightbox(item.dataset.src, item.dataset.caption);
+  });
+}
+
+/* ── Render List ─────────────────────────────────────────── */
+export function renderList(containerId, dataArray, buildElement) {
+  const container = document.getElementById(containerId);
+  const fragment = document.createDocumentFragment();
+
+  dataArray.forEach((item, i) => {
+    const el = buildElement(item, i);
+    fragment.appendChild(el);
+  });
+
+  container.appendChild(fragment);
 }

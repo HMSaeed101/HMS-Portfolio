@@ -1,90 +1,70 @@
 /* ── RENDER ───────────────────────────────────────────────── */
 
-import { projects, photos, academics, skills } from './data.js';
+import { renderList } from './utils.js';
 
-export function renderProjects() {
-  const grid = document.getElementById('projects-grid');
+function cloneTemplate(id) {
+  return document.getElementById(id).content.cloneNode(true).firstElementChild;
+}
 
-  projects.forEach((p, i) => {
-    const card = document.createElement('div');
-    card.className = 'project-card reveal';
-    card.style.transitionDelay = (i * 0.08) + 's';
-    card.innerHTML = `
-      <img src="${p.img}" alt="${p.title}" loading="lazy">
-      <div class="project-body">
-        <span class="project-tag">${p.tag}</span>
-        <div class="project-title">${p.title}</div>
-        <p class="project-desc">${p.desc}</p>
-        <div class="project-links">
-          <a href="${p.demo}" class="project-link">
-            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo
-          </a>
-          <a href="${p.code}" class="project-link">
-            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            View Code
-          </a>
-        </div>
-      </div>`;
-    grid.appendChild(card);
+export function renderProjects(projects) {
+  renderList('projects-grid', projects, (p, i) => {
+    const card = cloneTemplate('tpl-project-card');
+    card.style.setProperty('--delay', (i * 0.08) + 's');
+
+    card.querySelector('img').src                    = p.img;
+    card.querySelector('img').alt                    = p.title;
+    card.querySelector('.project-tag').textContent   = p.tag;
+    card.querySelector('.project-title').textContent = p.title;
+    card.querySelector('.project-desc').textContent  = p.desc;
+    card.querySelector('.demo-link').href            = p.demo;
+    card.querySelector('.code-link').href            = p.code;
+
+    return card;
   });
 }
 
-export function renderPhotos(openLightbox) {
-  const grid = document.getElementById('photo-grid');
+export function renderPhotos(photos) {
+  renderList('photo-grid', photos, (ph) => {
+    const item = cloneTemplate('tpl-photo-item');
 
-  photos.forEach(ph => {
-    const item = document.createElement('div');
-    item.className = 'photo-item';
-    item.innerHTML = `
-      <img src="${ph.src}" alt="${ph.caption}" loading="lazy">
-      <div class="photo-overlay"><span class="photo-caption">${ph.caption}</span></div>`;
-    item.addEventListener('click', () => openLightbox(ph.src, ph.caption));
-    grid.appendChild(item);
+    item.dataset.src                                  = ph.src;
+    item.dataset.caption                              = ph.caption;
+    item.querySelector('img').src                     = ph.src;
+    item.querySelector('img').alt                     = ph.caption;
+    item.querySelector('.photo-caption').textContent  = ph.caption;
+
+    return item;
   });
 }
 
-export function renderAcademics() {
-  const list = document.getElementById('academic-list');
+export function renderAcademics(academics) {
+  renderList('academic-list', academics, (a) => {
+    const item = cloneTemplate('tpl-academic-item');
 
-  academics.forEach(a => {
-    const item = document.createElement('div');
-    item.className = 'academic-item reveal';
-    item.innerHTML = `
-      <div class="academic-year">${a.year}</div>
-      <div class="academic-body">
-        <div class="academic-degree">${a.degree}</div>
-        <div class="academic-school">${a.school}</div>
-        <p class="academic-desc">${a.desc}</p>
-        <span class="academic-badge">${a.badge}</span>
-      </div>`;
-    list.appendChild(item);
+    item.querySelector('.academic-year').textContent   = a.year;
+    item.querySelector('.academic-degree').textContent = a.degree;
+    item.querySelector('.academic-school').textContent = a.school;
+    item.querySelector('.academic-desc').textContent   = a.desc;
+    item.querySelector('.academic-badge').textContent  = a.badge;
+
+    return item;
   });
 }
 
-export function renderSkills() {
-  const wrapper = document.getElementById('skills-grid');
+export function renderSkills(skills) {
+  renderList('skills-grid', skills, (cat) => {
+    const section = cloneTemplate('tpl-skills-category');
+    section.querySelector('.skills-category-title').textContent = cat.category;
+    section.dataset.color = cat.colorKey;
 
-  skills.forEach(cat => {
-    const section = document.createElement('div');
-    section.className = 'skills-category';
-
-    const title = document.createElement('div');
-    title.className = 'skills-category-title';
-    title.textContent = cat.category;
-
-    const pills = document.createElement('div');
-    pills.className = 'skills-pills';
+    const pills = section.querySelector('.skills-pills');
 
     cat.items.forEach(name => {
-      const pill = document.createElement('span');
-      pill.className = 'skill-pill';
-      pill.innerHTML = `<span class="skill-dot" style="background:${cat.color}"></span>${name}`;
+      const pill = cloneTemplate('tpl-skill-pill');
+      pill.append(document.createTextNode(name));
       pills.appendChild(pill);
     });
 
-    section.appendChild(title);
-    section.appendChild(pills);
-    wrapper.appendChild(section);
+    return section;
   });
 }

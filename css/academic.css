@@ -1,0 +1,45 @@
+/* ── ACADEMIC ─────────────────────────────────────────────── */
+
+.academic-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+.academic-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 2rem;
+  align-items: start;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,.04);
+  transition: transform .2s;
+}
+.academic-item:hover { transform: translateX(6px); }
+
+.academic-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: rgba(107,124,74,.25);
+  line-height: 1;
+  min-width: 72px;
+}
+
+.academic-degree {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.academic-school { font-size: .9rem; color: var(--olive); margin: .25rem 0; font-weight: 500; }
+.academic-desc   { font-size: .88rem; color: var(--ink-60); line-height: 1.7; margin-top: .5rem; }
+
+.academic-badge {
+  display: inline-block;
+  background: rgba(107,124,74,.1);
+  color: var(--olive);
+  font-size: .7rem;
+  font-weight: 600;
+  padding: .2rem .8rem;
+  border-radius: 99px;
+  margin-top: .75rem;
+}

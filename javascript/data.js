@@ -77,22 +77,22 @@ export const academics = [
 export const skills = [
   {
     category: "Languages",
-    color: "#728649",
+    colorKey: "olive",
     items: ["Python", "JavaScript", "C++", "SQL", "HTML5", "CSS3"]
   },
   {
     category: "Frameworks & Libraries",
-    color: "#b5956a",
+    colorKey: "earth",
     items: ["Node.js", "React", "Express.js", "Pandas", "NumPy"]
   },
   {
     category: "Tools & Platforms",
-    color: "#6a8ab5",
+    colorKey: "sky",
     items: ["Git", "GitHub", "VS Code", "Linux", "Figma", "SQLite"]
   },
   {
     category: "Concepts",
-    color: "#a06ab5",
+    colorKey: "purple",
     items: ["REST APIs", "OOP", "Data Structures", "Algorithms", "UI/UX Design", "Agile"]
   }
 ];

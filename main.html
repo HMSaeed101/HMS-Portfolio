@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
+  <link rel="icon" href="Pics/Saeed/HMS.svg" type="image/svg-xml">
   <link rel="stylesheet" href="css/main.css">
 
   <script type="module" src="javascript/main.js"></script>
@@ -69,7 +69,7 @@
     
     <div class="hero-inner">
 
-      <div class="hero-text reveal">
+      <div class="hero-text">
         <p class="label">Welcome to my world</p>
         <h1 class="hero-h1">I'm <span>Saeed</span>.</h1>
         <p class="hero-sub">Storyteller, Programmer, Photographer &amp; Lifelong Learner</p>
@@ -236,16 +236,35 @@
         </div>
       </div>
 
-      <div class="contact-form reveal reveal-delay-2">
+      <!-- Contact Form -->
+      <div class="contact-form reveal reveal-delay-1">
+        
         <form id="contactForm">
+        
           <div class="form-row">
-            <input type="text" class="form-field" placeholder="Name" required>
-            <input type="email" class="form-field" placeholder="Email" required>
+          
+          <div class="form-group">
+            <label for="contactName" class="form-label">Name</label>
+            <input type="text" id="contactName" class="form-field" placeholder="Your name" aria-label="Name" required>
           </div>
-          <textarea class="form-field" placeholder="Message" rows="5" required></textarea>
-          <button type="submit" class="form-submit">Send Message</button>
-        </form>
+
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">Email</label>
+            <input type="email" id="contactEmail" class="form-field" placeholder="Your email" aria-label="Email" required>
+          </div>
+      
       </div>
+
+      <div class="form-group">
+        <label for="contactMessage" class="form-label">Message</label>
+        <textarea id="contactMessage" class="form-field" placeholder="Your message..." rows="5" aria-label="Message" required></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Send Message</button>
+      
+    </form>
+    
+  </div>
 
     </div>
   </div>
@@ -263,6 +282,64 @@
     </div>
   </div>
 </footer>
+
+<!-- ── TEMPLATES ──────────────────────────────────────────── -->
+
+<template id="tpl-project-card">
+  <div class="project-card reveal">
+    <img loading="lazy">
+    <div class="project-body">
+      <span class="project-tag"></span>
+      <div class="project-title"></div>
+      <p class="project-desc"></p>
+      <div class="project-links">
+        <a class="project-link demo-link">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Live Demo
+        </a>
+        <a class="project-link code-link">
+          <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          View Code
+        </a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-photo-item">
+  <div class="photo-item">
+    <img loading="lazy">
+    <div class="photo-overlay">
+      <span class="photo-caption"></span>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-academic-item">
+  <div class="academic-item reveal">
+    <div class="academic-year"></div>
+    <div class="academic-body">
+      <div class="academic-degree"></div>
+      <div class="academic-school"></div>
+      <p class="academic-desc"></p>
+      <span class="academic-badge"></span>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-skills-category">
+  <div class="skills-category">
+    <div class="skills-category-title"></div>
+    <div class="skills-pills"></div>
+  </div>
+</template>
+
+<template id="tpl-skill-pill">
+  <span class="skill-pill">
+    <span class="skill-dot"></span>
+  </span>
+</template>
+
 
 <!-- ── LIGHTBOX ────────────────────────────────────────────── -->
 <div class="lightbox" id="lightbox">
