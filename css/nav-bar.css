@@ -8,7 +8,7 @@ nav {
   background: rgba(247,244,239,0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--ink-10);
-  height: 72px;
+  height: 68px;
 }
 
 .nav-inner {

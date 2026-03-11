@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | HMS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="Pics/Saeed/HMS.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    .not-found {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .not-found-inner {
+      max-width: 520px;
+    }
+
+    .not-found-code {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(7rem, 20vw, 12rem);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--olive);
+      opacity: .15;
+      user-select: none;
+    }
+
+    .not-found-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+
+    .not-found-sub {
+      font-size: 1rem;
+      color: var(--ink-60);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .not-found-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="not-found">
+    <div class="not-found-inner">
+
+      <div class="not-found-code">404</div>
+
+      <h1 class="not-found-title">Lost in the void.</h1>
+
+      <p class="not-found-sub">
+        The page you're looking for doesn't exist — or maybe it never did.<br>
+        Let's get you back somewhere familiar.
+      </p>
+
+      <div class="not-found-actions">
+        <a href="main.html" class="btn-olive">Go Home</a>
+        <a href="main.html#contact" class="btn-outline">Get in Touch</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

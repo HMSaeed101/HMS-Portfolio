@@ -23,6 +23,28 @@ footer {
 .footer-tagline { font-size: .85rem; color: var(--ink-60); margin-top: .2rem; }
 .footer-copy    { font-size: .78rem; color: var(--ink-40); }
 
+.footer-socials {
+  display: flex;
+  gap: .6rem;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--warm-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-60);
+  transition: background .2s, color .2s;
+}
+
+.footer-socials a:hover {
+  background: var(--olive);
+  color: #fff;
+}
+
 /* ── LIGHTBOX ─────────────────────────────────────────────── */
 
 .lightbox {

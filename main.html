@@ -5,6 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Hafiz Muhammad Saeed — Storyteller, Programmer, and Photographer based in Taxila, Pakistan.">
+  
+  <!-- Open Graph / WhatsApp / LinkedIn -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://yourwebsite.com/">
+  <meta property="og:title"       content="HMS | Hafiz Muhammad Saeed — Portfolio">
+  <meta property="og:description" content="Storyteller, Programmer, and Photographer based in Taxila, Pakistan.">
+  <meta property="og:image"       content="https://yourwebsite.com/Pics/Saeed/Saeed.jpg">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="HMS | Hafiz Muhammad Saeed — Portfolio">
+  <meta name="twitter:description" content="Storyteller, Programmer, and Photographer based in Taxila, Pakistan.">
+  <meta name="twitter:image"       content="https://yourwebsite.com/Pics/Saeed/Saeed.jpg">
+
   <title>HMS | Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +30,8 @@
 
   <script type="module" src="javascript/main.js"></script>
 </head>
+
+
 
 <body>
 
@@ -79,6 +95,11 @@
         <div class="hero-ctas reveal">
           <a href="#about" class="btn-olive">My Story</a>
           <a href="#projects" class="btn-outline">View Projects</a>
+          <a href="Docs/HMS_CV.pdf" class="btn-outline" download>
+      
+              <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+          </a>
         </div>
       </div>
 
@@ -275,9 +296,22 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
+      
       <div>
         <div class="footer-name">Hafiz Muhammad Saeed</div>
         <div class="footer-tagline">Storyteller · Programmer · Photographer</div>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/HMSaeed101" aria-label="GitHub">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/hms-aeed" aria-label="LinkedIn">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://www.instagram.com/hms_aeed" aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
       </div>
       <p class="footer-copy">© 2026 Hafiz Muhammad Saeed. Built with care.</p>
     </div>
@@ -357,6 +391,12 @@
   </button>
   <div class="lightbox-counter" id="lightboxCounter"></div>
 </div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
 
 </body>
 </html>

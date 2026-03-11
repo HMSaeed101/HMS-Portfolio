@@ -70,21 +70,21 @@ export const skills = [
   {
     category: "Languages",
     colorKey: "olive",
-    items: ["Python", "JavaScript", "C++", "SQL", "HTML5", "CSS3"]
+    items: ["C++", "JavaScript", "Python", "SQL", "HTML5", "CSS3"]
   },
   {
     category: "Frameworks & Libraries",
     colorKey: "earth",
-    items: ["Node.js", "React", "Express.js", "Pandas", "NumPy"]
+    items: ["Node.js", "React", "Express.js"]
   },
   {
     category: "Tools & Platforms",
     colorKey: "sky",
-    items: ["Git", "GitHub", "VS Code", "Linux", "Figma", "SQLite"]
+    items: ["Git", "GitHub", "VS Code", "Linux", "Figma", "XAMPP"]
   },
   {
     category: "Concepts",
     colorKey: "purple",
-    items: ["REST APIs", "OOP", "Data Structures", "Algorithms", "UI/UX Design", "Agile"]
+    items: ["OOP", "Data Structures", "Algorithms", "UI/UX Design"]
   }
 ];

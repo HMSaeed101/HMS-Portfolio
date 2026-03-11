@@ -96,7 +96,7 @@ img { display: block; max-width: 100%; }
 .reveal {
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity .65s ease, transform .65s ease;
+  transition: opacity .50s ease, transform .50s ease;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: .1s; }
