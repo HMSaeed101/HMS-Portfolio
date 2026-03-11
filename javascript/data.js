@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     title: "Photography Portfolio",
-    tag: "Observence",
+    tag: "Observance",
     desc: "A masonry-grid photography showcase with lightbox viewing, lazy loading, and EXIF metadata display.",
     img: "https://picsum.photos/seed/proj2/600/400",
     demo: "#", code: "#"
@@ -32,15 +32,14 @@ export const projects = [
 ];
 
 export const photos = [
-  { src: "../Pics/Clicks/Insect Fruitfly.jpg", caption: "Close-up Shot of a fruit fly" },
-  { src: "../Pics/Clicks/Bird Kyole.jpg", caption: "Kyole on a Tree" },
-  { src: "../Pics/Clicks/Pink.jpg", caption: "Pink Bud" },
-  { src: "../Pics/Clicks/Purple Flower.jpg", caption: "Purple Flower" },
-  { src: "../Pics/Clicks/Spider.jpg", caption: "Market Colours" },
-  { src: "../Pics/Clicks/Yellow Flower.jpg", caption: "Quiet Moments" },
-  { src: "../Pics/Clicks/Rose_bud.jpg", caption: "Architecture" },
-  { src: "../Pics/Clicks/Dandellion.jpg", caption: "People & Places" },
-  { src: "../Pics/Clicks/Bird Kyole.jpg", caption: "Morning Mist" }
+  { src: "../Pics/Clicks/Insect Fruitfly.jpg", caption: "Close-up Shot of a fruit fly", category: "Macro" },
+  { src: "../Pics/Clicks/Bird Kyole.jpg",       caption: "Kyole on a Tree",              category: "Birds" },
+  { src: "../Pics/Clicks/Pink.jpg",             caption: "Pink Bud",                     category: "Flora" },
+  { src: "../Pics/Clicks/Purple Flower.jpg",    caption: "Purple Flower",                category: "Flora" },
+  { src: "../Pics/Clicks/Spider.jpg",           caption: "Market Colours",               category: "Macro" },
+  { src: "../Pics/Clicks/Yellow Flower.jpg",    caption: "Quiet Moments",                category: "Flora" },
+  { src: "../Pics/Clicks/Rose_bud.jpg",         caption: "Rose Bud",                     category: "Flora" },
+  { src: "../Pics/Clicks/Dandellion.jpg",       caption: "Dandelion",                    category: "Flora" }
 ];
 
 export const academics = [
@@ -57,13 +56,6 @@ export const academics = [
     school: "Jinnah Education System, Taxila",
     desc: "Completed with distinction. Awarded merit scholarship for consecutive academic years.",
     badge: "90% Marks"
-  },
-  {
-    year: "2020",
-    degree: "Matriculation (Science)",
-    school: "Jinnah Education System, Taxila",
-    desc: "Foundation in mathematics, physics and chemistry. Class representative and debate team captain.",
-    badge: "A+ Grade"
   },
   {
     year: "2020",

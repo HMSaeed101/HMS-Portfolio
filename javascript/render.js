@@ -33,6 +33,7 @@ export function renderPhotos(photos) {
 
     item.dataset.src                                  = ph.src;
     item.dataset.caption                              = ph.caption;
+    item.dataset.category                             = ph.category || '';
     item.querySelector('img').src                     = ph.src;
     item.querySelector('img').alt                     = ph.caption;
     item.querySelector('.photo-caption').textContent  = ph.caption;

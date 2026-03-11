@@ -44,8 +44,10 @@ nav {
   background: var(--olive);
   transition: width .25s;
 }
-.nav-links a:hover { color: var(--olive); }
-.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover       { color: var(--olive); }
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
+.nav-links a.active        { color: var(--olive); }
 
 .nav-toggle {
   display: none;

@@ -1,9 +1,35 @@
 /* ── PHOTOGRAPHY ──────────────────────────────────────────── */
 
+.photo-filter {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.filter-btn {
+  padding: .4rem 1.1rem;
+  border-radius: 99px;
+  border: 1.5px solid var(--ink-10);
+  background: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--ink-60);
+  cursor: pointer;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: #fff;
+}
+
 .photo-grid {
   columns: 3 300px;
   column-gap: 1.25rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .photo-item {
@@ -13,7 +39,9 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  transition: opacity .3s;
 }
+.photo-item.hidden { display: none; }
 .photo-item img { width: 100%; display: block; transition: transform .4s; }
 .photo-item:hover img { transform: scale(1.04); }
 

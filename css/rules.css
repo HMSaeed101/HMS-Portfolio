@@ -26,7 +26,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--warm-bg);
   color: var(--ink);
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
@@ -102,3 +102,26 @@ img { display: block; max-width: 100%; }
 .reveal-delay-1 { transition-delay: .1s; }
 .reveal-delay-2 { transition-delay: .2s; }
 .reveal-delay-3 { transition-delay: .3s; }
+
+/* ── SCROLL PROGRESS BAR ──────────────────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--olive);
+  z-index: 200;
+  transition: width .1s linear;
+  border-radius: 0 99px 99px 0;
+}
+
+/* ── FORM VALIDATION STATES ───────────────────────────────── */
+.form-field.field-ok    { box-shadow: 0 0 0 2px rgba(107,124,74,.45); }
+.form-field.field-error { box-shadow: 0 0 0 2px rgba(200,60,60,.35); background: rgba(200,60,60,.04); }
+
+/* ── REDUCED MOTION ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}

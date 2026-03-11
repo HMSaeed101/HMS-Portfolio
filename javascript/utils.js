@@ -1,15 +1,24 @@
 /* ── UTILS ────────────────────────────────────────────────── */
 
-/* ── LIGHTBOX ─────────────────────────────────────────────── */
+/* ── LIGHTBOX (with prev/next navigation) ─────────────────── */
 export function initLightbox() {
   const lightbox    = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
+  const prevBtn     = document.getElementById('lightboxPrev');
+  const nextBtn     = document.getElementById('lightboxNext');
+  const counter     = document.getElementById('lightboxCounter');
 
-  function openLightbox(src, alt) {
+  let currentIndex = 0;
+  let items        = [];
+
+  function openLightbox(src, alt, index, allItems) {
+    items        = allItems || [];
+    currentIndex = index ?? 0;
     lightboxImg.src = src;
     lightboxImg.alt = alt;
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
+    updateControls();
   }
 
   function closeLightbox() {
@@ -17,12 +26,41 @@ export function initLightbox() {
     document.body.style.overflow = '';
   }
 
+  function navigate(dir) {
+    currentIndex = (currentIndex + dir + items.length) % items.length;
+    const item = items[currentIndex];
+    lightboxImg.classList.add('switching');
+    setTimeout(() => {
+      lightboxImg.src = item.dataset.src;
+      lightboxImg.alt = item.dataset.caption;
+      lightboxImg.classList.remove('switching');
+    }, 150);
+    updateControls();
+  }
+
+  function updateControls() {
+    if (items.length <= 1) {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+      counter.style.display = 'none';
+    } else {
+      prevBtn.style.display = '';
+      nextBtn.style.display = '';
+      counter.style.display = '';
+      counter.textContent = `${currentIndex + 1} / ${items.length}`;
+    }
+  }
+
   document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  prevBtn.addEventListener('click', e => { e.stopPropagation(); navigate(-1); });
+  nextBtn.addEventListener('click', e => { e.stopPropagation(); navigate(1); });
 
-  // Close on Escape key
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  navigate(-1);
+    if (e.key === 'ArrowRight') navigate(1);
   });
 
   return openLightbox;
@@ -30,7 +68,6 @@ export function initLightbox() {
 
 
 /* ── MOBILE MENU ──────────────────────────────────────────── */
-
 export function initMobileMenu() {
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -41,8 +78,9 @@ export function initMobileMenu() {
     link.addEventListener('click', () => mobileMenu.classList.remove('open'));
   });
 
-  // Close when clicking outside
+  // Only close on outside click when menu is actually open
   document.addEventListener('click', (e) => {
+    if (!mobileMenu.classList.contains('open')) return;
     if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
       mobileMenu.classList.remove('open');
     }
@@ -51,7 +89,6 @@ export function initMobileMenu() {
 
 
 /* ── SCROLL REVEAL ────────────────────────────────────────── */
-
 export function initScrollReveal() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -66,40 +103,92 @@ export function initScrollReveal() {
 }
 
 
-/* ── CONTACT FORM ─────────────────────────────────────────── */
+/* ── SCROLL SPY + PROGRESS BAR ────────────────────────────── */
+export function initScrollSpy() {
+  const sections    = document.querySelectorAll('section[id]');
+  const navLinks    = document.querySelectorAll('.nav-links a');
+  const progressBar = document.getElementById('scrollProgress');
 
+  function updateProgress() {
+    const scrollTop  = window.scrollY;
+    const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+    const progress   = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (progressBar) progressBar.style.width = progress + '%';
+  }
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+
+  sections.forEach(s => spy.observe(s));
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+}
+
+
+/* ── CONTACT FORM ─────────────────────────────────────────── */
 export function initContactForm() {
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('.form-submit');
-    btn.textContent = 'Message Sent ✓';
+    btn.textContent      = 'Message Sent ✓';
     btn.style.background = '#4a7c3f';
+
+    this.querySelectorAll('.form-field').forEach(f => f.style.opacity = '.4');
+
     setTimeout(() => {
-      btn.textContent = 'Send Message';
+      btn.textContent      = 'Send Message';
       btn.style.background = '';
+      this.querySelectorAll('.form-field').forEach(f => f.style.opacity = '');
       this.reset();
     }, 3000);
   });
+
+  // Inline validation feedback on blur
+  form.querySelectorAll('.form-field[required]').forEach(field => {
+    field.addEventListener('blur', () => {
+      const valid = field.checkValidity() && field.value.trim() !== '';
+      field.classList.toggle('field-error', !valid);
+      field.classList.toggle('field-ok',     valid);
+    });
+    field.addEventListener('input', () => {
+      if (field.classList.contains('field-error') && field.checkValidity() && field.value.trim() !== '') {
+        field.classList.remove('field-error');
+        field.classList.add('field-ok');
+      }
+    });
+  });
 }
+
 
 /* ── PHOTO GRID ─────────────────────────────────────────── */
 export function initPhotoGrid(openLightbox) {
-  document.getElementById('photo-grid').addEventListener('click', (e) => {
+  const grid = document.getElementById('photo-grid');
+
+  grid.addEventListener('click', (e) => {
     const item = e.target.closest('.photo-item');
     if (!item) return;
-    openLightbox(item.dataset.src, item.dataset.caption);
+    const all   = Array.from(grid.querySelectorAll('.photo-item'));
+    const index = all.indexOf(item);
+    openLightbox(item.dataset.src, item.dataset.caption, index, all);
   });
 }
+
 
 /* ── Render List ─────────────────────────────────────────── */
 export function renderList(containerId, dataArray, buildElement) {
   const container = document.getElementById(containerId);
-  const fragment = document.createDocumentFragment();
-
+  const fragment  = document.createDocumentFragment();
   dataArray.forEach((item, i) => {
-    const el = buildElement(item, i);
-    fragment.appendChild(el);
+    fragment.appendChild(buildElement(item, i));
   });
-
   container.appendChild(fragment);
 }

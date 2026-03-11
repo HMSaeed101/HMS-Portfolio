@@ -13,18 +13,30 @@
   font-size: 1.25rem;
   line-height: 1.8;
   color: rgba(42,42,34,.8);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .philosophy-box {
   background: rgba(107,124,74,.06);
   border: 1px solid rgba(107,124,74,.12);
+  border-left: 3px solid var(--olive);
   border-radius: var(--radius);
   padding: 2rem 2.5rem;
   font-style: italic;
   color: var(--olive);
   font-size: 1.05rem;
   line-height: 1.8;
+  position: relative;
+}
+.philosophy-box::before {
+  content: '\201C';
+  position: absolute;
+  top: -.5rem; left: 1.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  color: rgba(107,124,74,.15);
+  line-height: 1;
+  pointer-events: none;
 }
 .philosophy-box strong {
   display: block;

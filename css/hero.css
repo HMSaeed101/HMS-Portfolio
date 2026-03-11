@@ -32,7 +32,7 @@
   max-width: 460px;
 }
 
-.hero-btn { display: flex; flex-wrap: wrap; gap: 1rem; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 .hero-img-wrap {
   position: relative;
