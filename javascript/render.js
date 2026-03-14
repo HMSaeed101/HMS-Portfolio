@@ -1,14 +1,6 @@
 /* ── RENDER ───────────────────────────────────────────────── */
 
-import { renderList } from './utils.js';
-
-export function cloneTemplate(id) {
-  const template = document.getElementById(id);
-  if (!template) {
-    throw new Error(`cloneTemplate: no <template> found with id "${id}"`);
-  }
-  return template.content.cloneNode(true).firstElementChild;
-}
+import { renderList, cloneTemplate } from "./utils.js";
 
 export function renderProjects(projects) {
   renderList('projects-grid', projects, (p, i) => {

@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Hafiz Muhammad Saeed — Storyteller, Programmer, and Photographer based in Taxila, Pakistan.">
-  
+
   <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://yourwebsite.com/">
+  <meta property="og:url"         content="https://hms.com/">
   <meta property="og:title"       content="HMS | Hafiz Muhammad Saeed — Portfolio">
   <meta property="og:description" content="Storyteller, Programmer, and Photographer based in Taxila, Pakistan.">
   <meta property="og:image"       content="https://yourwebsite.com/Pics/Saeed/Saeed.jpg">
@@ -34,6 +34,48 @@
 
 
 <body>
+
+
+<!-- ── No-Script  ─────────────────────────────────────── -->
+<noscript>
+  <div style="
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--ink);
+    color: var(--warm-bg);
+    padding: .75rem 1.5rem;
+    border-radius: 99px;
+    font-size: .85rem;
+    font-family: 'DM Sans', sans-serif;
+    z-index: 999;
+  ">
+    JavaScript is disabled — some content may not load.
+  </div>
+</noscript>
+
+<!-- ── SVG Sprite ─────────────────────────────────────── -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+    <symbol id="icon-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    </symbol>
+
+    <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect x="2" y="9" width="4" height="12"/>
+      <circle cx="4" cy="4" r="2"/>
+    </symbol>
+
+    <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+
+    </symbol>
+  </svg>
+
 
 <!-- ── SCROLL PROGRESS ─────────────────────────────────────── -->
 <div class="scroll-progress" id="scrollProgress"></div>
@@ -91,12 +133,12 @@
       <div class="hero-text">
         <p class="label">Based in Taxila, Pakistan</p>
         <h1 class="hero-h1">I'm <span>Saeed</span>.</h1>
-        <p class="hero-sub">Storyteller, Programmer, Photographer &amp; Lifelong Learner</p>
+        <p class="hero-sub">Builder, Photographer &amp; Perpetual Learner</p>
         <div class="hero-ctas reveal">
           <a href="#about" class="btn-olive">My Story</a>
           <a href="#projects" class="btn-outline">View Projects</a>
           <a href="Docs/HMS_CV.pdf" class="btn-outline" download>
-      
+
               <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download CV
           </a>
@@ -126,11 +168,12 @@
 
     <div class="about-grid">
       <div class="about-text reveal reveal-delay-1">
-        <p>I believe that life is a collection of stories waiting to be told. My journey is a blend of logical precision and creative expression.</p>
-        <p>From the structured world of programming to the spontaneous beauty captured through my lens, I seek balance in all things.</p>
+
+        <p>I came to CS through FSC Pre-Medical and a self-directed gap year — curiosity led me here, not a plan. Outside the terminal I chase macro shots around Taxila, play chess, and read anything about how people build things.</p>
+
         <div class="philosophy-box">
           <strong>My Philosophy</strong>
-          "To live is to learn, and to learn is to grow. I find beauty in the intersection of technology and humanity."
+          "I'd rather know a little about everything than everything about one thing — and then spend a lifetime making those things connect."
         </div>
       </div>
       <div class="about-imgs reveal reveal-delay-2">
@@ -158,6 +201,40 @@
   </div>
 </section>
 
+<!-- ── ACADEMIC ────────────────────────────────────────────── -->
+<section id="academic" class="section bg-white">
+  <div class="container">
+
+    <div class="reveal">
+      <p class="label">Education</p>
+      <h2 class="section-title">Academic Achievements</h2>
+      <p class="section-sub">Milestones of my educational journey.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="academic-list reveal reveal-delay-1" id="academic-list"></div>
+
+  </div>
+</section>
+
+
+<!-- ── SKILLS ─────────────────────────────────────────────── -->
+<section id="skills" class="section">
+  <div class="container">
+
+    <div class="reveal">
+      <p class="label">What I work with</p>
+      <h2 class="section-title">Skills & Tools</h2>
+      <p class="section-sub">The languages, frameworks, and tools I use daily.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="skills-wrapper reveal reveal-delay-1" id="skills-grid"></div>
+
+  </div>
+</section>
+
+
 <!-- ── PHOTOGRAPHY ─────────────────────────────────────────── -->
 <section id="photography" class="section bg-white">
   <div class="container">
@@ -181,37 +258,6 @@
   </div>
 </section>
 
-<!-- ── ACADEMIC ────────────────────────────────────────────── -->
-<section id="academic" class="section bg-white">
-  <div class="container">
-
-    <div class="reveal">
-      <p class="label">Education</p>
-      <h2 class="section-title">Academic Achievements</h2>
-      <p class="section-sub">Milestones of my educational journey.</p>
-      <div class="divider"></div>
-    </div>
-
-    <div class="academic-list reveal reveal-delay-1" id="academic-list"></div>
-
-  </div>
-</section>
-
-<!-- ── SKILLS ─────────────────────────────────────────────── -->
-<section id="skills" class="section">
-  <div class="container">
-
-    <div class="reveal">
-      <p class="label">What I work with</p>
-      <h2 class="section-title">Skills & Tools</h2>
-      <p class="section-sub">The languages, frameworks, and tools I use daily.</p>
-      <div class="divider"></div>
-    </div>
-
-    <div class="skills-wrapper reveal reveal-delay-1" id="skills-grid"></div>
-
-  </div>
-</section>
 
 <!-- ── CONTACT ─────────────────────────────────────────────── -->
 <section id="contact" class="section bg-white">
@@ -245,25 +291,32 @@
             <p>+92 317 6348855</p>
           </div>
         </div>
+
         <div class="contact-row">
           <div class="contact-icon">
             <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
+
           <div class="contact-meta">
             <p>Location</p>
             <p>Taxila, Pakistan</p>
           </div>
+
         </div>
+
         <div class="socials">
-          <a href="https://github.com/HMSaeed101" class="social-btn" aria-label="GitHub">
+          <a href="https://github.com/HMSaeed101" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
             <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           </a>
-          <a href="https://www.linkedin.com/in/hms-aeed" class="social-btn" aria-label="LinkedIn">
+
+          <a href="https://www.linkedin.com/in/hms-aeed" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
-          <a href="https://www.instagram.com/hms_aeed" class="social-btn" aria-label="Instagram">
+
+          <a href="https://www.instagram.com/hms_aeed" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
+
         </div>
       </div>
 
@@ -292,26 +345,30 @@
   </div>
 </section>
 
+
 <!-- ── FOOTER ──────────────────────────────────────────────── -->
 <footer>
   <div class="container">
     <div class="footer-inner">
-      
+
       <div>
         <div class="footer-name">Hafiz Muhammad Saeed</div>
-        <div class="footer-tagline">Storyteller · Programmer · Photographer</div>
+        <div class="footer-tagline">Storyteller · Builder · Photographer</div>
       </div>
 
       <div class="footer-socials">
-        <a href="https://github.com/HMSaeed101" aria-label="GitHub">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <a href="https://github.com/HMSaeed101" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-github"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/hms-aeed" aria-label="LinkedIn">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+
+        <a href="https://www.linkedin.com/in/hms-aeed" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-linkedin"/></svg>
         </a>
-        <a href="https://www.instagram.com/hms_aeed" aria-label="Instagram">
-          <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+
+        <a href="https://www.instagram.com/hms_aeed" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#icon-instagram"/></svg>
         </a>
+
       </div>
       <p class="footer-copy">© 2026 Hafiz Muhammad Saeed. Built with care.</p>
     </div>
@@ -322,26 +379,30 @@
 <!-- ── TEMPLATES ───────────────────────────────────────────── -->
 
 <template id="tpl-project-card">
+
   <div class="project-card reveal">
-    <div class="project-img-wrap">
-      <img src="" alt="" loading="lazy">
-    </div>
+
+    <div class="project-img-wrap"><img src="" alt="" loading="lazy"></div>
+
     <div class="project-body">
       <span class="project-tag"></span>
+
       <h3 class="project-title"></h3>
+
       <p class="project-desc"></p>
+
       <div class="project-links">
+
         <a class="project-link demo-link" href="#">
-          <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Live Demo
-        </a>
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+
         <a class="project-link code-link" href="#">
-          <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          Source Code
-        </a>
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Source Code</a>
+
       </div>
     </div>
   </div>
+
 </template>
 
 <template id="tpl-photo-item">
@@ -392,9 +453,10 @@
   <div class="lightbox-counter" id="lightboxCounter"></div>
 </div>
 
+
+<!--Back to Top Button-->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"/>
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/>
   </svg>
 </button>
 

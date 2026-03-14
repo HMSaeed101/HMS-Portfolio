@@ -140,7 +140,7 @@ export function initContactForm() {
     e.preventDefault();
     const btn = this.querySelector('.form-submit');
     btn.textContent      = 'Message Sent ✓';
-    btn.style.background = '#4a7c3f';
+    btn.style.background = --olive;
 
     this.querySelectorAll('.form-field').forEach(f => f.style.opacity = '.4');
 
@@ -191,6 +191,15 @@ export function renderList(containerId, dataArray, buildElement) {
     fragment.appendChild(buildElement(item, i));
   });
   container.appendChild(fragment);
+}
+
+/* ── Clone Template ─────────────────────────────────────────── */
+export function cloneTemplate(id) {
+	const template = document.getElementById(id);
+	if (!template) {
+		throw new Error(`cloneTemplate: no <template> found with id "${id}"`);
+	}
+	return template.content.cloneNode(true).firstElementChild;
 }
 
 /* ── Back to Top ─────────────────────────────────────────── */
