@@ -68,14 +68,14 @@ nav {
 }
 
 /* ── MOBILE MENU ──────────────────────────────────────────── */
-
 .mobile-menu {
   display: none;
-  position: fixed;
   top: 72px; left: 0;
+  position: fixed;
   width: 100%;
+  align-items : center;
+  justify-content : center;
   background: var(--warm-bg);
-  border-bottom: 1px solid var(--ink-10);
   z-index: 99;
   padding: 1.5rem clamp(1.25rem,5vw,4rem);
   flex-direction: column;
@@ -83,15 +83,18 @@ nav {
 }
 .mobile-menu.open { display: flex; }
 
-.mobile-menu a {
-  font-size: 1.1rem;
+.mobile-link {
+  font-size: 1.06rem;
   font-weight: 500;
   color: var(--ink-60);
-  padding: .5rem 0;
+  padding: .25rem 0;
   display: flex;
   align-items: center;
-  gap: .75rem;
-  border-bottom: 1px solid var(--ink-10);
+  gap: .80rem;
+  border-bottom: 1px solid var(--ink-20);
   transition: color .2s;
 }
-.mobile-menu a:hover { color: var(--olive); }
+.mobile-link:hover {
+  color: var(--olive);
+  transform : scale(1.03);
+}
