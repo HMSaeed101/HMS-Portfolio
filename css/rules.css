@@ -48,6 +48,7 @@ img { display: block; max-width: 100%; }
 .serif { font-family: 'Cormorant Garamond', serif; }
 
 .label {
+  padding-top : 10px;
   font-size: 0.7rem;
   letter-spacing: .15em;
   text-transform: uppercase;

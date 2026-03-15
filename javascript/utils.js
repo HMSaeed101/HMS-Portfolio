@@ -131,44 +131,6 @@ export function initScrollSpy() {
   updateProgress();
 }
 
-
-/* ── CONTACT FORM ─────────────────────────────────────────── */
-export function initContactForm() {
-  const form = document.getElementById('contactForm');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('.form-submit');
-    btn.textContent      = 'Message Sent ✓';
-    btn.style.background = 'var(--olive)';
-
-    this.querySelectorAll('.form-field').forEach(f => f.style.opacity = '.4');
-
-    setTimeout(() => {
-      btn.textContent      = 'Send Message';
-      btn.style.background = '';
-      this.querySelectorAll('.form-field').forEach(f => f.style.opacity = '');
-      this.reset();
-    }, 3000);
-  });
-
-  // Inline validation feedback on blur
-  form.querySelectorAll('.form-field[required]').forEach(field => {
-    field.addEventListener('blur', () => {
-      const valid = field.checkValidity() && field.value.trim() !== '';
-      field.classList.toggle('field-error', !valid);
-      field.classList.toggle('field-ok',     valid);
-    });
-    field.addEventListener('input', () => {
-      if (field.classList.contains('field-error') && field.checkValidity() && field.value.trim() !== '') {
-        field.classList.remove('field-error');
-        field.classList.add('field-ok');
-      }
-    });
-  });
-}
-
-
 /* ── PHOTO GRID ─────────────────────────────────────────── */
 export function initPhotoGrid(openLightbox) {
   const grid = document.getElementById('photo-grid');

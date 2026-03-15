@@ -10,7 +10,6 @@ import {
 	initMobileMenu,
 	initScrollReveal,
 	initScrollSpy,
-	initContactForm,
 	initPhotoGrid,
 	initBackToTop,
 } from "./utils.js";
@@ -27,7 +26,6 @@ initPhotoGrid(openLightbox);
 initMobileMenu();
 initScrollReveal();
 initScrollSpy();
-initContactForm();
 initBackToTop();
 
 // Photo category filter
