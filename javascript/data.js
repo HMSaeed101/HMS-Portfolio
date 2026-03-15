@@ -2,18 +2,10 @@
 
 export const projects = [
 	{
-		title: "AI Chat Interface",
-		tag: "Web App",
-		desc: "A conversational AI interface powered by the Gemini API with a clean, minimal design and real-time streaming responses.",
-		img: "https://picsum.photos/seed/proj1/600/400",
-		demo: "#",
-		code: "#",
-	},
-	{
 		title: "Photography Portfolio",
 		tag: "Observance",
 		desc: "---",
-		img: "https://picsum.photos/seed/proj2/600/400",
+		img: "https://picsum.photos/seed/proj1/600/400",
 		demo: "#",
 		code: "#",
 	},
@@ -82,10 +74,5 @@ export const skills = [
     category: "Tools & Platforms",
     colorKey: "sky",
     items: ["Git", "GitHub", "VS Code", "Figma", "XAMPP"]
-  },
-  {
-    category: "Concepts",
-    colorKey: "purple",
-    items: ["OOP", "Data Structures", "Algorithms", "UI/UX Design"]
   }
 ];
