@@ -140,7 +140,7 @@ export function initContactForm() {
     e.preventDefault();
     const btn = this.querySelector('.form-submit');
     btn.textContent      = 'Message Sent ✓';
-    btn.style.background = --olive;
+    btn.style.background = 'var(--olive)';
 
     this.querySelectorAll('.form-field').forEach(f => f.style.opacity = '.4');
 

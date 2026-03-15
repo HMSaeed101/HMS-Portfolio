@@ -21,10 +21,10 @@
 
   <title>HMS | Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" &display=swap href="https://fonts.googleapis.com">
+  <link rel="preconnect" &display=swap href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="icon" href="Pics/Saeed/HMS.svg" type="image/svg+xml">
+  <link rel="icon" href="Pics/svgs/star.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="Pics/Saeed/Saeed.jpg">
   <link rel="stylesheet" href="css/main.css">
 
@@ -72,8 +72,14 @@
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-
     </symbol>
+
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/>
+      <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/>
+    </symbol>
+
   </svg>
 
 
@@ -87,9 +93,9 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#photography">Photography</a>
       <a href="#academic">Academic</a>
       <a href="#skills">Skills</a>
+      <a href="#photography">Photography</a>
       <a href="#contact">Contact</a>
     </div>
     <button class="nav-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -246,13 +252,6 @@
       <div class="divider"></div>
     </div>
 
-    <div class="photo-filter reveal">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="Macro">Macro</button>
-      <button class="filter-btn" data-filter="Birds">Birds</button>
-      <button class="filter-btn" data-filter="Flora">Flora</button>
-    </div>
-
     <div class="photo-grid reveal reveal-delay-1" id="photo-grid"></div>
 
   </div>
@@ -282,21 +281,23 @@
             <p>hafizmsaeed101@gmail.com</p>
           </div>
         </a>
-        <div class="contact-row">
+
+
+        <div class="contact-row" href="tel:+923219798860">
           <div class="contact-icon">
             <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
           </div>
           <div class="contact-meta">
             <p>Phone</p>
-            <p>+92 317 6348855</p>
+            <p>+92 321 9798860</p>
           </div>
         </div>
+
 
         <div class="contact-row">
           <div class="contact-icon">
             <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-
           <div class="contact-meta">
             <p>Location</p>
             <p>Taxila, Pakistan</p>
@@ -305,40 +306,24 @@
         </div>
 
         <div class="socials">
+
+          <a href="https://wa.me/923219798860?text=Hi%20Saeed%2C%20I%20saw%20your%20portfolio!" class="social-btn" aria-label="Whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg class="icon"><use href="#icon-whatsapp"/></svg>
+          </a>
+
           <a href="https://github.com/HMSaeed101" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <svg class="icon"><use href="#icon-github"/></svg>
           </a>
 
           <a href="https://www.linkedin.com/in/hms-aeed" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <svg class="icon"><use href="#icon-linkedin"/></svg>
           </a>
 
           <a href="https://www.instagram.com/hms_aeed" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <svg class="icon"><use href="#icon-instagram"/></svg>
           </a>
 
         </div>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form reveal reveal-delay-1">
-        <form id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="contactName" class="form-label">Name</label>
-              <input type="text" id="contactName" class="form-field" placeholder="Your name" aria-label="Name" aria-required="true" required>
-            </div>
-            <div class="form-group">
-              <label for="contactEmail" class="form-label">Email</label>
-              <input type="email" id="contactEmail" class="form-field" placeholder="Your email" aria-label="Email" aria-required="true" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="contactMessage" class="form-label">Message</label>
-            <textarea id="contactMessage" class="form-field" placeholder="Your message..." rows="5" aria-label="Message" aria-required="true" required></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send Message</button>
-        </form>
       </div>
 
     </div>

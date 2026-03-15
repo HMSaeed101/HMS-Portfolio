@@ -12,6 +12,7 @@
   --earth:    #b5956a;
   --sky:      #6a8ab5;
   --purple:   #a06ab5;
+
   --radius:   32px;
   --radiusmd: 24px;
   --radiussm: 16px;
@@ -68,7 +69,7 @@ img { display: block; max-width: 100%; }
 }
 
 .divider {
-  width: 56px;
+  width: 200px;
   height: 3px;
   background: rgba(107,124,74,0.25);
   border-radius: 99px;

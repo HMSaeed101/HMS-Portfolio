@@ -1,4 +1,4 @@
-/* ── CONTACT ──────────────────────────────────────────────── */
+/* ── CONTACT ──────────────────────────────────────────*/
 
 .contact-grid {
   display: grid;
@@ -41,63 +41,48 @@
 }
 .social-btn:hover { background: var(--olive); color: #fff; }
 
-.contact-form {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: clamp(1.5rem,4vw,3rem);
-  box-shadow: 0 4px 32px rgba(0,0,0,.06);
-}
 
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: .4rem;
-  width: 100%;
-}
 
-.form-label {
-  font-size: .72rem;
-  font-weight: 500;
-  letter-spacing: .08em;
+
+
+
+/* Updated meta styles */
+.contact-label {
+  font-size: .68rem;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--ink-60);
-  padding-left: .25rem;
+  color: var(--ink-40);
+  margin: 0;
 }
 
-.form-field {
-  width: 100%;
-  padding: 1rem 1.25rem;
-  background: var(--warm-bg);
-  border: none;
-  border-radius: 16px;
-  font-family: 'Inter', sans-serif;
-  font-size: .9rem;
-  color: var(--ink);
-  outline: none;
-  transition: box-shadow .2s;
-}
-.form-field:focus { box-shadow: 0 0 0 2px rgba(107,124,74,.35); }
-
-textarea.form-field { resize: vertical; min-height: 120px; margin-bottom: 1rem; }
-
-.form-submit {
-  width: 100%;
-  padding: 1.1rem;
-  background: var(--olive);
-  color: #fff;
-  border: none;
-  border-radius: 99px;
+.contact-value {
+  font-weight: 600;
   font-size: .95rem;
-  font-weight: 500;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  transition: background .2s, transform .15s;
+  margin: 0;
 }
-.form-submit:hover { background: var(--olive-lt); transform: translateY(-1px); }
+
+.value-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: var(--ink-40);
+  font-size: 1.15rem;
+  cursor: pointer;
+  padding: 2px;
+  opacity: 0.65;
+  transition: all .2s;
+}
+.copy-btn:hover {
+  opacity: 1;
+  color: var(--olive);
+  transform: scale(1.15);
+}
+
+/* Make sure hover still works on the whole row */
+.contact-row:hover .copy-btn { color: #fff; }
