@@ -40,7 +40,7 @@ export const academics = [
 		year: "2025",
 		degree: "Bachelor of Science in Computer Science",
 		school: "University of Engineering and Technology, Taxila",
-		desc: "Second-year student focused on software engineering, web development, and the intersection of design and code. Currently building production-ready projects as part of a self-directed learning curriculum.",
+		desc: "Second-year student focused on software engineering, web development, and the intersection of design and code.",
 		badge: "In Progress",
 	},
 	{

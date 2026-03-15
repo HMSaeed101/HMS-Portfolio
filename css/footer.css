@@ -4,6 +4,7 @@ footer {
   background: var(--white);
   border-top: 1px solid var(--ink-10);
   padding: 3rem 0;
+  border-radius : var(--radiussm);
 }
 
 .footer-inner {
