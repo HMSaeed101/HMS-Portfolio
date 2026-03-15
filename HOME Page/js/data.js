@@ -28,11 +28,31 @@ export const projects = [
 ];
 
 export const photos = [
-  { src: "../Pics/Clicks/Insect Fruitfly.jpg", caption: "Close-up Shot of a fruit fly", category: "Macro" },
-  { src: "../Pics/Clicks/Spider.jpg",           caption: "Market Colours",               category: "Macro" },
-  { src: "../Pics/Clicks/Yellow-Flower.jpg",    caption: "Quiet Moments",                category: "Flora" },
-  { src: "../Pics/Clicks/Rose_bud.jpg",         caption: "Rose Bud",                     category: "Flora" },
-  { src: "../Pics/Clicks/Dandellion.jpg",       caption: "Dandelion",                    category: "Flora" }
+	{
+		src: "../Pics/Clicks/Insect Fruitfly.jpg",
+		caption: "Close-up Shot of a fruit fly",
+		category: "Macro",
+	},
+	{
+		src: "../Pics/Clicks/Spider.jpg",
+		caption: "Market Colours",
+		category: "Macro",
+	},
+	{
+		src: "../Pics/Clicks/Yellow-Flower.jpg",
+		caption: "Quiet Moments",
+		category: "Flora",
+	},
+	{
+		src: "../Pics/Clicks/Rose_bud.jpg",
+		caption: "Rose Bud",
+		category: "Flora",
+	},
+	{
+		src: "../Pics/Clicks/Dandellion.jpg",
+		caption: "Dandelion",
+		category: "Flora",
+	},
 ];
 
 export const academics = [
@@ -60,19 +80,19 @@ export const academics = [
 ];
 
 export const skills = [
-  {
-    category: "Languages",
-    colorKey: "olive",
-    items: ["C++", "JavaScript", "Python", "HTML5", "CSS3"]
-  },
-  {
-    category: "Frameworks & Libraries",
-    colorKey: "earth",
-    items: ["Node.js", "React", "Express.js"]
-  },
-  {
-    category: "Tools & Platforms",
-    colorKey: "sky",
-    items: ["Git", "GitHub", "VS Code", "Figma", "XAMPP"]
-  }
+	{
+		category: "Languages",
+		colorKey: "olive",
+		items: ["C++", "JavaScript", "Python", "HTML5", "CSS3"],
+	},
+	{
+		category: "Frameworks & Libraries",
+		colorKey: "earth",
+		items: ["Node.js", "React", "Express.js"],
+	},
+	{
+		category: "Tools & Platforms",
+		colorKey: "sky",
+		items: ["Git", "GitHub", "VS Code", "Figma", "XAMPP"],
+	},
 ];

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Photography by Hafiz Muhammad Saeed — Macro, Birds, Flora and beyond.">
+  <title>Photography | HMS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="Pics/Saeed/HMS.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/Child Pages/Photography-Page/main.css">
+
+</head>
+
+<body>
+
+<!-- ── HERO ─────────────────────────────────────────────────── -->
+<section class="pg-hero">
+  <div class="pg-hero-bg" id="heroBg"></div>
+
+  <a href="index.html" class="pg-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"/>
+    </svg>
+    Back to Portfolio
+  </a>
+
+  <div class="pg-hero-content">
+    <p class="pg-hero-eyebrow">Through My Lens</p>
+    <h1 class="pg-hero-title">Photo<em>graphy</em></h1>
+    <p class="pg-hero-sub">Macro details, quiet flora, and the birds that don't stay still — moments caught in Taxila and beyond.</p>
+    <div class="pg-hero-stats">
+      <div class="pg-stat">
+        <span class="pg-stat-num" id="statTotal">0</span>
+        <span class="pg-stat-label">Photographs</span>
+      </div>
+      <div class="pg-stat">
+        <span class="pg-stat-num" id="statCats">0</span>
+        <span class="pg-stat-label">Categories</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── GALLERY ───────────────────────────────────────────────── -->
+<section class="pg-body">
+  <div class="pg-container">
+
+    <!-- Filter bar -->
+    <div class="pg-filter-bar">
+      <div class="pg-filter-left">
+        <span class="pg-filter-label">Filter by</span>
+        <!-- buttons injected by JS -->
+      </div>
+      <div class="pg-view-count">
+        Showing <span id="visibleCount">0</span> photos
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="pg-grid" id="pgGrid"></div>
+    <div class="pg-empty" id="pgEmpty">No photos in this category yet.</div>
+
+  </div>
+</section>
+
+
+<!-- ── LIGHTBOX ──────────────────────────────────────────────── -->
+<div class="pg-lightbox" id="pgLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="pg-lb-inner">
+    <div class="pg-lb-img-wrap" id="pgLbWrap">
+      <img class="pg-lb-img" id="pgLbImg" src="" alt="">
+      <div class="pg-lb-caption" id="pgLbCaption">
+        <div class="pg-lb-cat"  id="pgLbCat"></div>
+        <div class="pg-lb-title" id="pgLbTitle"></div>
+        <div class="pg-lb-desc"  id="pgLbDesc"></div>
+      </div>
+    </div>
+  </div>
+
+  <button class="pg-lb-close" id="pgLbClose" aria-label="Close">✕</button>
+  <button class="pg-lb-nav pg-lb-prev" id="pgLbPrev" aria-label="Previous">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="pg-lb-nav pg-lb-next" id="pgLbNext" aria-label="Next">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="pg-lb-counter" id="pgLbCounter"></div>
+  <div class="pg-lb-hint">← → navigate &nbsp;·&nbsp; Esc close</div>
+</div>
+
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
+<footer class="pg-footer">
+  <div class="pg-footer-inner">
+    <div class="pg-footer-logo">HMS.</div>
+    <p class="pg-footer-copy">© 2026 Hafiz Muhammad Saeed</p>
+    <a href="index.html" class="pg-footer-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Return to Portfolio
+    </a>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
