@@ -8,17 +8,17 @@
 
   <title>HMS | Portfolio</title>
 
-  <link rel="preconnect" &display=swap href="https://fonts.googleapis.com">
-  <link rel="preconnect" &display=swap href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="icon" href="Pics/svgs/star.svg" type="image/svg+xml">
+  <link as="font" rel="preconnect" &display=swap href="https://fonts.googleapis.com">
+  <link as="font" rel="preconnect" &display=swap href="https://fonts.gstatic.com" crossorigin>
+  <link as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" as="icon" href="Pics/svgs/star.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="../Assets/Saeed/Saeed.jpg">
   <link rel="preload" as="image" href="../Assets/Saeed/Saeed Black.jpg">
   <link rel="preload" as="image" href="../Assets/Saeed/Saeed Sp.jpg">
 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" as="style" href="css/main.css">
 
-  <script type="module" src="js/main.js"></script>
+  <script type="module" as="script" src="js/main.js"></script>
 </head>
 
 
@@ -70,6 +70,10 @@
       <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/>
     </symbol>
 
+    <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path fill="#c3d59cb3" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </symbol>
+
   </svg>
 
 
@@ -79,7 +83,8 @@
 <!-- ── NAVIGATION ──────────────────────────────────────────── -->
 <nav>
   <div class="container nav-inner">
-    <a href="#" class="nav-logo">HMS.</a>
+    <a href="index.html" class="nav-logo">HMS.</a>
+
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -87,10 +92,16 @@
       <a href="#skills">Skills</a>
       <a href="#photography">Photography</a>
       <a href="#contact">Contact</a>
+
+      <a class="theme-toggle" id="themeToggle">
+        <svg class="icon" id="themeIcon"><use href="#icon-moon"/></svg></a>
+
     </div>
+
     <button class="nav-toggle" id="menuToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
+
   </div>
 </nav>
 
@@ -124,6 +135,11 @@
   <a href="#contact" class="mobile-link">
     <svg class="icon" viewBox="0 0 24 24"><path fill="#c3d59cb3" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     Contact
+  </a>
+
+  <a class="mobile-link theme-toggle" id="themeToggle">
+    <svg class="icon" id="themeIcon"><use href="#icon-moon"/></svg>
+    Mode
   </a>
 
   </div>
@@ -259,7 +275,7 @@
       <h2 class="section-title">
           Photography
       </h2>
-      <p class="section-sub">Capturing the fleeting moments of life.</p>
+      <p class="section-sub">Capturing with Patience, Shared with Purpose</p>
 
       <a href="../Photography Page/photography.html" class="btn-outline" style="margin-top:1.25rem; display:inline-flex;">
       Gallery →
@@ -298,7 +314,6 @@
             <p>hafizmsaeed101@gmail.com</p>
           </div>
         </a>
-
 
       <a href="tel:+923219798860" target="_blank" rel="noopener noreferrer" class="contact-row">
 
@@ -365,6 +380,7 @@
       </div>
 
       <div class="footer-socials">
+
         <a href="https://github.com/HMSaeed101" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
           <svg class="icon"><use href="#icon-github"/></svg>
         </a>

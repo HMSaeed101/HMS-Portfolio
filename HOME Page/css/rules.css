@@ -13,17 +13,36 @@
   --earth:    #b5956a;
   --sky:      #6a8ab5;
   --purple:   #a06ab5;
-
+  --nav-bg: rgba(247,244,239,0.88);
   --radius:   32px;
   --radiusmd: 24px;
   --radiussm: 16px;
+  --box-shadow: rgb(214, 230, 169);
+}
+
+
+/* ── DARK MODE ───────────────────────────── */
+[data-theme="dark"] {
+  --warm-bg:   #1a1814;     /* deep warm base */
+  --white:     #24211c;     /* cards / sections */
+  --ink:       #f5f2e8;     /* primary text */
+  --ink-60:    rgba(245,242,232,0.65);
+  --ink-40:    rgba(245,242,232,0.45);
+  --ink-20:    rgba(245,242,232,0.25);
+  --ink-10:    rgba(245,242,232,0.10);
+  --nav-bg: rgba(26,24,20,0.92);
+  --box-shadow: rgba(96, 112, 51, 0.116);
+
 }
 
 /* ── Reset ────────────────────────────────────────────────── */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  transition: background-color .40s ease, color .40s ease;
+}
 
 body {
   background: var(--warm-bg);

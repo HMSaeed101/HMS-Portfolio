@@ -5,7 +5,7 @@ nav {
   top: 0; left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(247,244,239,0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--ink-10);
   height: 68px;
@@ -70,6 +70,21 @@ nav {
 .nav-toggle span:hover {
   background: var(--olive-lt);
 }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-60);
+  cursor: pointer;
+  transition: color .2s;
+}
+.theme-toggle:hover { color: var(--olive); }
+.theme-toggle svg { width: 22px; height: 22px; }
 
 /* ── MOBILE MENU ──────────────────────────────────────────── */
 .mobile-menu {

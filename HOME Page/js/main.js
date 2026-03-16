@@ -12,6 +12,7 @@ import {
 	initScrollSpy,
 	initPhotoGrid,
 	initBackToTop,
+	initThemeToggle,
 } from "./utils.js";
 
 // Controller fetches from model, passes to view
@@ -27,6 +28,7 @@ initMobileMenu();
 initScrollReveal();
 initScrollSpy();
 initBackToTop();
+initThemeToggle();
 
 // Photo category filter
 document.querySelectorAll(".filter-btn").forEach((btn) => {

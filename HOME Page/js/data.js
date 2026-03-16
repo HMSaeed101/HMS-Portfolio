@@ -20,7 +20,7 @@ export const projects = [
 	{
 		title: "Electronic Library",
 		tag: "Web Dev",
-		desc: "A full-featured digital library management system built with vanilla JS ES modules, a modular CSS architecture across 25 files, and a clean MVC data layer. Supports search, filtering, and a structured book database.",
+		desc: "A full-featured digital library management system built with vanilla JS ES modules, a modular CSS architecture, and a clean MVC data layer. Supports search, filtering, and a structured book database.",
 		img: "https://picsum.photos/seed/proj3/600/400",
 		demo: "#",
 		code: "https://github.com/HMSaeed101",
