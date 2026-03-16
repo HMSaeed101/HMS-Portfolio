@@ -11,10 +11,10 @@
   <link as="font" rel="preconnect" &display=swap href="https://fonts.googleapis.com">
   <link as="font" rel="preconnect" &display=swap href="https://fonts.gstatic.com" crossorigin>
   <link as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="icon" as="icon" href="Pics/svgs/star.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="../Assets/Saeed/Saeed.jpg">
-  <link rel="preload" as="image" href="../Assets/Saeed/Saeed Black.jpg">
-  <link rel="preload" as="image" href="../Assets/Saeed/Saeed Sp.jpg">
+  <link rel="icon" as="icon" href="../Assets/Icons/graduation-cap.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="../Assets/Pics/Saeed/Saeed.jpg">
+  <link rel="preload" as="image" href="../Assets/Pics/Saeed/Saeed Black.jpg">
+  <link rel="preload" as="image" href="../Assets/Pics/Saeed/Saeed Sp.jpg">
 
   <link rel="stylesheet" as="style" href="css/main.css">
 
@@ -25,25 +25,6 @@
 
 <body>
 
-
-<!-- ── No-Script  ─────────────────────────────────────── -->
-<noscript>
-  <div style="
-    position: fixed;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--ink);
-    color: var(--warm-bg);
-    padding: .75rem 1.5rem;
-    border-radius: 99px;
-    font-size: .85rem;
-    font-family: 'DM Sans', sans-serif;
-    z-index: 999;
-  ">
-    JavaScript is disabled — some content may not load.
-  </div>
-</noscript>
 
 <!-- ── SVG Sprite ─────────────────────────────────────── -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -124,7 +105,7 @@
 
   <a href="#skills" class="mobile-link">
     <svg class="icon" viewBox="0 0 24 24"><path fill="#c3d59cb3" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-    Skills
+    Skills & Tools
   </a>
 
   <a href="#photography" class="mobile-link">
@@ -153,21 +134,24 @@
         <p class="label">Based in Taxila, Pakistan</p>
         <h1 class="hero-h1">I'm <span>Saeed</span>.</h1>
         <p class="hero-sub">Builder, Photographer &amp; Perpetual Learner</p>
-        <div class="hero-ctas reveal">
-          <a href="#about" class="btn-olive">My Story</a>
-          <a href="#projects" class="btn-outline">View Projects</a>
-          <a href="Docs/HMS_CV.pdf" class="btn-outline" download>
 
+        <div class="hero-ctas reveal">
+          <a href="#about" class="btn-olive">My Story → </a>
+
+          <a href="#projects" class="btn-outline">View Projects</a>
+
+          <a href="../Docs/HMS_CV.pdf" class="btn-outline" download>
               <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download CV
           </a>
+
         </div>
       </div>
 
       <div class="hero-img-wrap reveal reveal-delay-2">
         <div class="hero-blob hero-blob-1"></div>
         <div class="hero-blob hero-blob-2"></div>
-        <img src="../Assets/Saeed/Saeed.jpg" alt="Hafiz Muhammad Saeed" loading="eager">
+        <img src="../Assets/Pics/Saeed/Saeed.jpg" alt="Hafiz Muhammad Saeed" loading="eager">
       </div>
 
     </div>
@@ -179,7 +163,6 @@
   <div class="container">
 
     <div class="reveal">
-      <p class="label">&nbsp;Who I am</p>
       <h2 class="section-title">My Story</h2>
       <p class="section-sub">A narrative of life, philosophy, and the pursuit of balance.</p>
       <div class="divider"></div>
@@ -192,14 +175,16 @@
 
         <div class="philosophy-box">
           <strong>My Philosophy</strong>
-          I believe that the most profound truths aren't found within a single discipline, but in the threads that tie them together. My approach is rooted in horizontal Mastery - I gather insights from across technology, design, and mathematics to build cohesive systems.
+          I believe that - the most profound truths aren't found within a single discipline, but in the threads that tie them together.
         </div>
       </div>
 
+      <!-- !!In This Area I could Also Have a line for time line or creative stuff for my Whole life Story Representation -->
       <div class="about-imgs reveal reveal-delay-2">
-        <img src="../Assets/Saeed/Saeed Sp.jpg" alt="Saeed">
-        <img src="../Assets/Saeed/Saeed Black.jpg" alt="Saeed">
+        <img src="../Assets/Pics/Saeed/Saeed Black.jpg" alt="Saeed">
+        <img src="../Assets/Pics/Saeed/Saeed Sp.jpg" alt="Saeed">
       </div>
+      <!-- ! -->
     </div>
 
   </div>
@@ -210,7 +195,6 @@
   <div class="container">
 
     <div class="reveal">
-      <p class="label">&nbsp;What I build</p>
       <h2 class="section-title">Projects</h2>
       <p class="section-sub">A collection of digital artifacts and experiments.</p>
 
@@ -226,12 +210,38 @@
   </div>
 </section>
 
+<template id="tpl-project-card">
+
+  <div class="project-card reveal">
+
+    <div class="project-img-wrap"><img src="" alt="" loading="lazy"></div>
+
+    <div class="project-body">
+      <span class="project-tag"></span>
+
+      <h3 class="project-title"></h3>
+
+      <p class="project-desc"></p>
+
+      <div class="project-links">
+
+        <a class="project-link demo-link" href="#">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+
+        <a class="project-link code-link" href="#">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Source Code</a>
+
+      </div>
+    </div>
+  </div>
+
+</template>
+
 <!-- ── ACADEMIC ────────────────────────────────────────────── -->
 <section id="academic" class="section bg-white">
   <div class="container">
 
     <div class="reveal">
-      <p class="label">&nbsp;Education</p>
       <h2 class="section-title">Academic Achievements</h2>
       <p class="section-sub">Milestones of my educational journey.</p>
       <div class="divider"></div>
@@ -242,13 +252,23 @@
   </div>
 </section>
 
+<template id="tpl-academic-item">
+  <div class="academic-item">
+    <div class="academic-year"></div>
+    <div class="academic-body">
+      <div class="academic-degree"></div>
+      <div class="academic-school"></div>
+      <p class="academic-desc"></p>
+      <span class="academic-badge"></span>
+    </div>
+  </div>
+</template>
 
 <!-- ── SKILLS ─────────────────────────────────────────────── -->
 <section id="skills" class="section">
   <div class="container">
 
     <div class="reveal">
-      <p class="label">&nbsp;What I work with</p>
       <h2 class="section-title">Skills & Tools</h2>
       <p class="section-sub">The languages, frameworks, and tools I use daily.</p>
       <div class="divider"></div>
@@ -259,6 +279,17 @@
   </div>
 </section>
 
+<template id="tpl-skills-category">
+  <div class="skills-category">
+    <div class="skills-category-title"></div>
+    <div class="skills-pills"></div>
+  </div>
+</template>
+
+<template id="tpl-skill-pill">
+  <span class="skill-pill">
+  </span>
+</template>
 
 <!-- ── PHOTOGRAPHY ─────────────────────────────────────────── -->
 <section id="photography" class="section bg-white">
@@ -270,18 +301,16 @@
       <svg class="icon"><use href="#icon-instagram"/></svg>
       </a>
 
-      <p class="label">&nbsp;Through my lens</p>
+      <h2 class="section-title">Photography</h2>
 
-      <h2 class="section-title">
-          Photography
-      </h2>
-      <p class="section-sub">Capturing with Patience, Shared with Purpose</p>
+      <p class="section-sub">Captured with Patience, Shared with Purpose</p>
 
       <a href="../Photography Page/photography.html" class="btn-outline" style="margin-top:1.25rem; display:inline-flex;">
       Gallery →
       </a>
 
       <div class="divider"></div>
+
     </div>
 
     <div class="photo-grid reveal reveal-delay-1" id="photo-grid"></div>
@@ -289,13 +318,21 @@
   </div>
 </section>
 
+<template id="tpl-photo-item">
+  <div class="photo-item">
+    <img src="" alt="" loading="lazy">
+    <div class="photo-overlay">
+      <span class="photo-caption"></span>
+    </div>
+  </div>
+</template>
+
 
 <!-- ── CONTACT ─────────────────────────────────────────────── -->
 <section id="contact" class="section">
   <div class="container">
 
     <div class="reveal">
-      <p class="label">&nbsp;Get in touch</p>
       <h2 class="section-title">Let's Connect</h2>
       <p class="section-sub">I'd love to hear from you.</p>
       <div class="divider"></div>
@@ -305,43 +342,44 @@
 
       <div class="contact-info reveal reveal-delay-1">
 
-        <a href="mailto:hafizmsaeed101@gmail.com" class="contact-row">
+      <div class="contact-row">
+        <a href="mailto:hafizmsaeed101@gmail.com">
           <div class="contact-icon">
             <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
-          <div class="contact-meta">
-            <p>Email</p>
-            <p>hafizmsaeed101@gmail.com</p>
-          </div>
         </a>
+        <div class="contact-meta">
+          <p>Email</p>
+          <p>hafizmsaeed101@gmail.com</p>
+        </div>
+      </div>
 
-      <a href="tel:+923219798860" target="_blank" rel="noopener noreferrer" class="contact-row">
-
+    <div class="contact-row">
+      <a href="tel:+923219798860">
           <div class="contact-icon">
             <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
           </div>
-
-          <div class="contact-meta">
-            <p>Phone</p>
-            <p>+92 321 9798860</p>
-          </div>
-
       </a>
+      <div class="contact-meta">
+        <p>Phone</p>
+        <p>+92 321 9798860</p>
+      </div>
+    </div>
 
-
-      <a href="https://www.google.com/maps/search/?api=1&query=Taxila%2C+Pakistan" target="_blank" rel="noopener noreferrer" class="contact-row">
-
+    <div class="contact-row">
+      <a href="https://www.google.com/maps/search/?api=1&query=Taxila%2C+Pakistan" target="_blank" rel="noopener noreferrer">
         <div class="contact-icon">
             <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
+      </a>
 
         <div class="contact-meta">
           <p>Location</p>
           <p>Taxila, Pakistan</p>
         </div>
-      </a>
+      </div>
 
-    </div>
+  </div>
 
         <div class="socials">
 
@@ -400,81 +438,26 @@
 </footer>
 
 
-<!-- ── TEMPLATES ───────────────────────────────────────────── -->
-
-<template id="tpl-project-card">
-
-  <div class="project-card reveal">
-
-    <div class="project-img-wrap"><img src="" alt="" loading="lazy"></div>
-
-    <div class="project-body">
-      <span class="project-tag"></span>
-
-      <h3 class="project-title"></h3>
-
-      <p class="project-desc"></p>
-
-      <div class="project-links">
-
-        <a class="project-link demo-link" href="#">
-        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
-
-        <a class="project-link code-link" href="#">
-        <svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Source Code</a>
-
-      </div>
-    </div>
-  </div>
-
-</template>
-
-<template id="tpl-photo-item">
-  <div class="photo-item">
-    <img src="" alt="" loading="lazy">
-    <div class="photo-overlay">
-      <span class="photo-caption"></span>
-    </div>
-  </div>
-</template>
-
-<template id="tpl-academic-item">
-  <div class="academic-item">
-    <div class="academic-year"></div>
-    <div class="academic-body">
-      <div class="academic-degree"></div>
-      <div class="academic-school"></div>
-      <p class="academic-desc"></p>
-      <span class="academic-badge"></span>
-    </div>
-  </div>
-</template>
-
-<template id="tpl-skills-category">
-  <div class="skills-category">
-    <div class="skills-category-title"></div>
-    <div class="skills-pills"></div>
-  </div>
-</template>
-
-<template id="tpl-skill-pill">
-  <span class="skill-pill">
-    <span class="skill-dot"></span>
-  </span>
-</template>
-
 
 <!-- ── LIGHTBOX ────────────────────────────────────────────── -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+  ✕
+  </button>
+
   <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
     <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
   </button>
+
   <img id="lightboxImg" src="" alt="">
+
   <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">
     <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
   </button>
+
   <div class="lightbox-counter" id="lightboxCounter"></div>
+
 </div>
 
 

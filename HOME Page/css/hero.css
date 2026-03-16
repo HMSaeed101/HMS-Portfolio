@@ -1,61 +1,80 @@
 /* ── HERO ─────────────────────────────────────────────────── */
 
 #hero {
-  min-height: 92vh;
-  display: flex;
-  align-items: center;
-  padding-top: 72px;
+	min-height: 92vh;
+	display: flex;
+	align-items: center;
+	padding-top: 72px;
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem,6vw,6rem);
-  align-items: center;
-  width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: clamp(2rem, 6vw, 6rem);
+	align-items: center;
+	width: 100%;
+	/* margin-top : 5rem; */
 }
 
 .hero-h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3.5rem, 9vw, 7rem);
-  font-weight: 700;
-  line-height: 1;
-  margin: .75rem 0 1rem;
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(3.5rem, 9vw, 7rem);
+	font-weight: 700;
+	line-height: 1;
+	margin: 0.75rem 0 var(--fs-400);
 }
-.hero-h1 span { color: var(--olive); }
+.hero-h1 span {
+	color: var(--olive);
+}
 
 .hero-sub {
-  font-size: clamp(1rem,2vw,1.25rem);
-  color: var(--ink-60);
-  font-style: italic;
-  margin-bottom: 2.5rem;
-  max-width: 460px;
+	font-size: clamp(1rem, 2vw, 1.25rem);
+	color: var(--ink-60);
+	font-style: italic;
+	margin-bottom: var(--fs-800);
+	max-width: 460px;
 }
 
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+.hero-ctas {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--fs-300);
+}
 
 .hero-img-wrap {
-  position: relative;
-  padding: 20px;
+	position: relative;
+	padding: 20px;
 }
 
 .hero-img-wrap img {
-  border-radius: 35px;
-  width: 80%;
-  max-width: 440px;
-  margin: 0 auto;
-  box-shadow: 0 32px 80px rgba(0,0,0,.13);
-  position: relative;
-  z-index: 1;
-  aspect-ratio: 3/4;
-  object-fit: cover;
+	border-radius: 35px;
+	width: 80%;
+	max-width: 440px;
+	margin: 0 auto;
+	box-shadow: 0 32px 80px rgba(0, 0, 0, 0.13);
+	position: relative;
+	z-index: 1;
+	aspect-ratio: 3/4;
+	object-fit: cover;
 }
 
 .hero-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  pointer-events: none;
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(60px);
+	pointer-events: none;
 }
-.hero-blob-1 { width: 260px; height: 260px; background: rgba(107,124,74,.12); top: -40px; right: -40px; }
-.hero-blob-2 { width: 260px; height: 260px; background: rgba(181,149,106,.10); bottom: -40px; left: -40px; }
+.hero-blob-1 {
+	width: 260px;
+	height: 260px;
+	background: rgba(107, 124, 74, 0.12);
+	top: -40px;
+	right: -40px;
+}
+.hero-blob-2 {
+	width: 260px;
+	height: 260px;
+	background: rgba(181, 149, 106, 0.1);
+	bottom: -40px;
+	left: -40px;
+}

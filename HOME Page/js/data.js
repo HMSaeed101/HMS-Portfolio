@@ -29,29 +29,34 @@ export const projects = [
 
 export const photos = [
 	{
-		src: "../Assets/Clicks/Insect Fruitfly.jpg",
+		src: "/Assets/Pics/HMS Clicks/Insect Fruitfly.jpg",
 		caption: "Close-up Shot of a fruit fly",
 		category: "Macro",
+		desc: "Fruitfly Drosophila Melanogaster",
 	},
 	{
-		src: "../Assets/Clicks/Spider.jpg",
-		caption: "Market Colours",
+		src: "/Assets/Pics/HMS Clicks/Spider.jpg",
+		caption: "Spider",
 		category: "Macro",
+		desc: "Spider with Eight Legs",
 	},
 	{
-		src: "../Assets/Clicks/Yellow-Flower.jpg",
-		caption: "Quiet Moments",
+		src: "/Assets/Pics/HMS Clicks/Yellow-Flower.jpg",
+		caption: "Yellow Flower",
 		category: "Flora",
+		desc: "Symmetrical Yellow Flower",
 	},
 	{
-		src: "../Assets/Clicks/Rose_bud.jpg",
+		src: "/Assets/Pics/HMS Clicks/Rose_bud.jpg",
 		caption: "Rose Bud",
 		category: "Flora",
+		desc: "Rose Bud ready to Bloom",
 	},
 	{
-		src: "../Assets/Clicks/Dandellion.jpg",
+		src: "/Assets/Pics/HMS Clicks/Dandellion.jpg",
 		caption: "Dandelion",
 		category: "Flora",
+		desc: "Tall Dandelion from bellow",
 	},
 ];
 

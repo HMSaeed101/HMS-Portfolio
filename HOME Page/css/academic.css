@@ -1,12 +1,12 @@
 /* ── ACADEMIC ─────────────────────────────────────────────── */
 
 .academic-list {
-	margin-top: 3rem;
+	margin-top: var(--fs-900);
 	display: flex;
 	flex-direction: column;
 	gap: 0;
 	position: relative;
-	padding-left: 1.5rem;
+	padding-left: var(--fs-700);
 }
 
 /* Vertical timeline line */
@@ -33,9 +33,7 @@
 	background: var(--white);
 	border-radius: var(--radius);
 	padding: 2rem 2.5rem;
-	box-shadow:
-		0 3px 8px var(--box-shadow),
-		0 8px 18px var(--box-shadow);
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
 	transition:
 		transform 0.2s,
 		box-shadow 0.2s;
@@ -57,14 +55,12 @@
 }
 .academic-item:hover {
 	transform: translateY(-4px);
-	box-shadow:
-		0 4px 14px var(--box-shadow),
-		0 14px 28px var(--box-shadow);
+	box-shadow:0 2px 16px rgba(0, 0, 0, 0.158);
 }
 
 .academic-year {
 	font-family: "Cormorant Garamond", serif;
-	font-size: 2.2rem;
+	font-size: var(--fs-800);
 	font-weight: 700;
 	color: var(--ink-40);
 	line-height: 1;
@@ -73,18 +69,18 @@
 
 .academic-degree {
 	font-family: "Cormorant Garamond", serif;
-	font-size: 1.35rem;
+	font-size: var(--fs-600);
 	font-weight: 700;
 	color: var(--ink);
 }
 .academic-school {
-	font-size: 0.9rem;
+	font-size: var(--fs-300);
 	color: var(--olive);
 	margin: 0.25rem 0;
 	font-weight: 500;
 }
 .academic-desc {
-	font-size: 0.88rem;
+	font-size: var(--fs-300);
 	color: var(--ink-60);
 	line-height: 1.7;
 	margin-top: 0.5rem;
@@ -94,9 +90,9 @@
 	display: inline-block;
 	background: rgba(107, 124, 74, 0.1);
 	color: var(--olive);
-	font-size: 0.7rem;
+	font-size: var(--fs-300);
 	font-weight: 600;
 	padding: 0.2rem 0.8rem;
 	border-radius: 99px;
-	margin-top: 0.75rem;
+	margin-top: var(--fs-300);
 }

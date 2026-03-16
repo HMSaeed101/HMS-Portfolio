@@ -1,56 +1,68 @@
 /* ── ABOUT ────────────────────────────────────────────────── */
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem,6vw,6rem);
-  align-items: start;
-  margin-top: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: clamp(2rem, 6vw, 6rem);
+	align-items: start;
+	margin-top: var(--fs-400);
 }
 
 .about-text p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.25rem;
-  font-weight : 600;
-  line-height: 1.6;
-  color: var(--ink-60);
-  margin-bottom: 1.5rem;
-  padding : 10px;
+	font-family: "Cormorant Garamond", serif;
+	font-size: var(--fs-600);
+	font-weight: 600;
+	line-height: 1.6;
+	color: var(--ink-60);
+	margin-bottom: var(--fs-700);
+	padding: 10px;
+	cursor : text;
 }
 
 .philosophy-box {
-  background: rgba(107,124,74,.06);
-  border: 1px solid rgba(107,124,74,.12);
-  border-left: 3px solid var(--olive);
-  border-radius: var(--radius);
-  padding: 2rem 2.5rem;
-  font-style: italic;
-  word-spacing: 2px;
-  color: var(--olive);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  position: relative;
+	background: rgba(107, 124, 74, 0.06);
+	border: 1px solid rgba(107, 124, 74, 0.12);
+	border-left: 3px solid var(--olive);
+	border-radius: var(--radius);
+	padding: 2rem 2.5rem;
+	font-style: italic;
+	word-spacing: 2px;
+	color: var(--olive);
+	font-size: var(--fs-400);
+	line-height: 1.8;
+	position: relative;
+	cursor : url("/Assets/Icons/graduation-cap.svg"), auto;
 }
 .philosophy-box::before {
-  content: '\201C';
-  position: absolute;
-  top: -.10rem; left: 1.5rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 6rem;
-  color: rgba(107, 124, 74, 0.281);
-  line-height: 1;
-  pointer-events: none;
+	content: "\201C";
+	position: absolute;
+	top: -0.1rem;
+	left: 1.5rem;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 6rem;
+	color: rgba(107, 124, 74, 0.281);
+	line-height: 1;
+	pointer-events: none;
 }
 .philosophy-box strong {
-  display: block;
-  font-style: normal;
-  font-size: .68rem;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  margin-top: .70rem;
-  margin-bottom: .70rem;
+	display: block;
+	font-style: normal;
+	font-size: var(--fs-300);
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	margin-top: var(--fs-300);
+	margin-bottom: var(--fs-300);
 }
 
-.about-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.about-imgs img { border-radius: var(--radius); width: 100%; height: 260px; object-fit: cover; }
-.about-imgs img:nth-child(2) { margin-top: 2rem; }
+.about-imgs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--fs-400);
+	cursor : zoom-in;
+}
+.about-imgs img {
+	border-radius: var(--radius);
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+}
