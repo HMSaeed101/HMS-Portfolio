@@ -5,9 +5,6 @@
   /* Colors */
   --olive:        #728649;
   --olive-lt:     #8a9e60;
-  --earth:        #b5956a;
-  --sky:          #6a8ab5;
-  --purple:       #a06ab5;
 
   --warm-bg:      #f7f4ef;
   --white:        #ffffff;
@@ -42,6 +39,8 @@
 
 /* Dark mode */
 [data-theme="dark"] {
+  --olive:        #8baa51;
+  --olive-lt:     #95ae61;
   --warm-bg:      #1a1814;
   --white:        #24211c;
   --ink:          #f5f2e8;

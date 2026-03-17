@@ -66,16 +66,17 @@
 	line-height: 1;
 	min-width: 72px;
 }
-
+.academic-year:hover {
+	color : var(--olive);
+}
 .academic-degree {
 	font-family: "Cormorant Garamond", serif;
-	font-size: var(--fs-600);
+	font-size: var(--fs-700);
 	font-weight: 700;
 	color: var(--ink);
 }
 .academic-school {
 	font-size: var(--fs-300);
-	color: var(--olive);
 	margin: 0.25rem 0;
 	font-weight: 500;
 }

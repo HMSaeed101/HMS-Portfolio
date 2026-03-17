@@ -45,7 +45,7 @@
 	color: var(--ink);
 	padding: 0.65rem 2rem;
 	border-radius: 99px;
-	font-size: var(--fs-400);
+	font-size: var(--fs-300);
 	font-weight: 500;
 	transition:
 		background 0.2s,
@@ -55,28 +55,6 @@
 .btn-outline:hover {
 	background: rgba(107, 124, 74, 0.158);
 	transform: scale(1.03);
-}
-
-.btn-cv {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5rem;
-	border: 1.5px solid var(--olive);
-	color: var(--olive);
-	background: transparent;
-	padding: 0.85rem 2rem;
-	border-radius: 99px;
-	font-size: var(--fs-400);
-	font-weight: 500;
-	transition:
-		background 0.2s,
-		color 0.2s,
-		transform 0.15s;
-}
-.btn-cv:hover {
-	background: var(--olive);
-	color: #fff;
-	transform: translateY(-1px);
 }
 
 .back-to-top {
@@ -93,7 +71,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 4px 20px rgba(114, 134, 73, 0.4);
+	box-shadow: 0 4px 20px rgba(70, 83, 43, 0.249);
 	opacity: 0;
 	transform: translateY(12px);
 	transition:
@@ -105,9 +83,10 @@
 }
 .back-to-top.visible {
 	opacity: 1;
-	transform: translateY(0);
+	transform: translateY(-4px);
 	pointer-events: auto;
 }
 .back-to-top:hover {
-	background: var(--olive-lt);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.298);
+	transform: translateY(-6px);
 }

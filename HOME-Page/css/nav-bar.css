@@ -26,6 +26,9 @@ nav {
 	color: var(--olive);
 	letter-spacing: -0.02em;
 }
+.nav-logo:hover {
+	color: rgb(96, 123, 41);
+}
 
 .nav-links {
 	display: flex;
