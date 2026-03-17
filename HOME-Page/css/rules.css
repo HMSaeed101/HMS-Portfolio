@@ -149,15 +149,6 @@ h4 { font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
 
 .serif { font-family: 'Cormorant Garamond', serif; }
 
-.label {
-  padding-top : var(--fs-300);
-  font-size: var(--fs-300);
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--olive);
-  font-weight: 500;
-}
-
 .divider {
   width: 140px;
   height: 3px;
