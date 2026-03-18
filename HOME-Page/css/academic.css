@@ -57,7 +57,9 @@
 	transform: translateY(-4px);
 	box-shadow:0 2px 16px rgba(0, 0, 0, 0.158);
 }
-
+.academic-body{
+	cursor: text;
+}
 .academic-year {
 	font-family: "Cormorant Garamond", serif;
 	font-size: var(--fs-800);

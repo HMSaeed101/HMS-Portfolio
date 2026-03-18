@@ -59,8 +59,8 @@
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	border-radius: 99px;
-	padding: 0.25rem 0.85rem;
-	margin-bottom: var(--fs-400);
+	padding: 0rem 0.65rem;
+	margin-bottom: 0.5rem;
 }
 
 .project-title {

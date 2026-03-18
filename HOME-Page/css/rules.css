@@ -2,7 +2,10 @@
 
 /* 1. Custom Properties ────────────────────────────────────────── */
 :root {
-  /* Colors */
+
+  --scroll-thumb: #8a9e60;
+  --scroll-track: #f7f4ef;
+
   --olive:        #728649;
   --olive-lt:     #8a9e60;
 
@@ -39,6 +42,8 @@
 
 /* Dark mode */
 [data-theme="dark"] {
+  --scroll-thumb: #95ae61;
+  --scroll-track: #1a1814;
   --olive:        #8baa51;
   --olive-lt:     #95ae61;
   --warm-bg:      #1a1814;
@@ -61,12 +66,17 @@
   padding: 0;
 }
 
+::-webkit-scrollbar-thumb { background: var(--scroll-thumb); }
+::-webkit-scrollbar-track { background: var(--scroll-track); }
+
+
 html {
   scroll-behavior: smooth;
   transition: background-color .40s ease, color .40s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
   font-size: var(--fs-base);
 }
 
