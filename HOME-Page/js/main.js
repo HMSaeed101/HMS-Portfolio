@@ -1,4 +1,4 @@
-import { projects, photos, academics, skills } from "./data.js";
+import { projects, academics, skills } from "./data.js";
 import {
 	renderProjects,
 	// renderPhotos,
